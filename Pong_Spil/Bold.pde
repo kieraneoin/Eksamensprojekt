@@ -21,21 +21,38 @@ class Bold {
     xPos = xPos + xSpeed;
     yPos = yPos + ySpeed;
 
-   // if (xPos < 100 || xPos > 1100) {
-     // println("gayboi");
-    }
-    
-     float left(){
+    // if (xPos < 100 || xPos > 1100) {
+    // println("gayboi");
+  }
+
+  float venstre() {
     return xPos-diameter/2;
   }
-  float right(){
+  float hojre() {
     return xPos+diameter/2;
   }
-  float top(){
+  float op() {
     return yPos-diameter/2;
   }
-  float bottom(){
+  float ned() {
     return yPos+diameter/2;
   }
+
+  void udForSkaerm() {
+    if (hojre() > width) {
+      xSpeed = -xSpeed;
+    }
     
+    if (venstre() < 0) {
+      xSpeed = -xSpeed;
+    }
+    
+    if (ned() > height) {
+      ySpeed = -ySpeed;
+    }
+    
+    if (op() < 0) {
+      ySpeed = -ySpeed;
+    }
   }
+}

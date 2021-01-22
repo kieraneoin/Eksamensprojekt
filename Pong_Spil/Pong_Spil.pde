@@ -13,4 +13,5 @@ void draw() {
   clear();
   bold.display();
   bold.move();
+  bold.udForSkaerm();
 }
