@@ -16,7 +16,7 @@ void setup() {
   //soldier = loadImage("soldier.png");
   bold= new Bold(width/2, height/2, 30);
   bold.xSpeed = 5;
-  bold.ySpeed = random(-3, 3);
+  bold.ySpeed = random(3,-3);
 }
 
 
@@ -30,8 +30,7 @@ void draw() {
   bold.display();
   bold.move();
   bold.udForSkaerm();
-  paddel.collide();
-  
+  paddel.collide();  
 }
 
 void vaegge() { //<>//
