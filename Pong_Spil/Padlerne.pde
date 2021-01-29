@@ -1,5 +1,5 @@
 class Padlerne {
- 
+
   PImage terrorist;
   PImage soldier;
 
@@ -11,7 +11,7 @@ class Padlerne {
   float speedX;
 
   Padlerne(float tempX, float tempY, float tempW, float tempH) {
-   x = tempX;
+    x = tempX;
     y = tempY;
     w = tempW;
     h = tempH;
@@ -19,17 +19,16 @@ class Padlerne {
     speedX = 0;
   }
 
-void tegnTerrorist() {
+  void tegnTerrorist() {
     noStroke();
     //fill(0);
-     rect(x,y,20,110);
-     fill(255);
+    rect(x, y, 20, 110);
+    fill(255);
     image(terrorist, x-70, y-30, 150, 150);
-   
   }
-  
-  void tegnSoldat(){
-  //image(soldier, xPos, yPos, 100, 150);
+
+  void tegnSoldat() {
+    //image(soldier, xPos, yPos, 100, 150);
   }
 
   void moveTerrorist() {
@@ -41,27 +40,27 @@ void tegnTerrorist() {
       y += 10;
     }
   }
-  
-  void collide(){
-  if (bold.venstre() < paddel.hojre() && bold.yPos > paddel.op()+90 && bold.yPos < paddel.ned()+20){
-    bold.xSpeed = -bold.xSpeed;
-    bold.xSpeed += 2;
-    bold.ySpeed = random(-10,10);
-  }
-  }
-  
 
-  
-float venstre(){
+  void collide() {
+    if (bold.venstre() < paddel.hojre() && bold.yPos > paddel.op()+90 && bold.yPos < paddel.ned()+20) {
+      bold.xSpeed = -bold.xSpeed;
+      bold.xSpeed += 2;
+      bold.ySpeed = random(-10, 10);
+    }
+  }
+
+
+
+  float venstre() {
     return x-w/2;
   }
-  float hojre(){
+  float hojre() {
     return x+w/2;
   }
-  float op(){
+  float op() {
     return y-h/2;
   }
-  float ned(){
+  float ned() {
     return y+h/2;
   }
 }
