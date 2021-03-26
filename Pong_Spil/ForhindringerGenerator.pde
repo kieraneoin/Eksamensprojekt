@@ -26,9 +26,7 @@ class ForhindringerGenerator {
       //AA BB colloision 
       if (bold.xPos > f.xPos && bold.xPos < f.xPos + f.brede && bold.yPos > f.yPos && bold.yPos < f.yPos + f.hoejde) {
         println("Forhindring ramt");
-        bold.xSpeed *=-1;
-        bold.xSpeed += 2;
-        bold.ySpeed *=-1;
+        bold.xSpeed = -bold.xSpeed;
       }
       /*
     if (bold.venstre() == f.xPos && bold.yPos > paddel.op() || bold.hojre() == f.xPos) {
