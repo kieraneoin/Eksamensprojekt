@@ -44,6 +44,7 @@ void draw() {
   bold.move();
   bold.udForSkaerm();
   paddel.collide();
+  println("SUT MIN PIK");
 
 
   if (FG.antalForhindringer == 0){

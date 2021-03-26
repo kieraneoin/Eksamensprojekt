@@ -14,6 +14,7 @@ class Bold {
   }
 
   void display() {
+ 
     ellipse(xPos,yPos, diameter, diameter);
   }
 
