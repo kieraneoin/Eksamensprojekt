@@ -1,7 +1,9 @@
-class Forhindring{
+class Forhindring {
   int xPos = int(random(250, width - 250));
   int yPos = int(random(10, height - 120));
-  
+  int brede = 30;
+  int hoejde = 150;
+
   void display() {
     fill(240, 200, 175);
     //Højre

@@ -14,8 +14,8 @@ class Bold {
   }
 
   void display() {
- 
-    ellipse(xPos,yPos, diameter, diameter);
+
+    ellipse(xPos, yPos, diameter, diameter);
   }
 
   void move() {
@@ -43,15 +43,15 @@ class Bold {
     if (hojre() >= width) {
       xSpeed = -xSpeed;
     }
-    
+
     if (venstre() <= 0) {
       xSpeed = -xSpeed;
     }
-    
+
     if (ned() >= height) {
       ySpeed = -ySpeed;
     }
-    
+
     if (op() <= 0) {
       ySpeed = -ySpeed;
     }
