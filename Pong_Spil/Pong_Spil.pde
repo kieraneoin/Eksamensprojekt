@@ -1,4 +1,4 @@
-//Globale Variabler //<>// //<>// //<>// //<>// //<>//
+//Globale Variabler //<>// //<>// //<>// //<>// //<>// //<>//
 PImage background;
 PImage soldier;
 PImage moske;
@@ -44,7 +44,7 @@ void draw() {
   bold.move();
   bold.udForSkaerm();
   paddel.collide();
-  println("SUT MIN PIK");
+ 
 
 
   if (FG.antalForhindringer == 0){
