@@ -12,6 +12,9 @@ ForhindringerGenerator FG = new ForhindringerGenerator();
 int H = 790;
 int H2 = 0;
 
+int startTime = 0;
+int time = 0;
+
 void setup() {
   size(1600, 900);
   paddel = new Padlerne(200, 500, 30, 200);
@@ -36,29 +39,31 @@ void draw() {
   image(background, 0, 0);
   paddel.moveTerrorist();
   paddel.tegnTerrorist();
-  soldat.tegnSoldat();
+  soldat.tegnSoldat(); //<>//
   tegnbaser();
   vaegge(); //<>//
-  bold.display(); //<>//
+  bold.display();
   bold.move();
   bold.udForSkaerm();
   paddel.collide();
 
-
+  time = millis()/1000 - startTime;
+  textSize(32);
+  text(time, 1500, 100);
 
   if (FG.antalForhindringer == 0) {
     FG.lavAntal(3);
   }
-
-  FG.display();
+ //<>//
+  FG.display(); //<>//
   FG.collideDetection();
 }
-
-void vaegge() { //<>// //<>//
-  if (paddel.y - 10 < H2) {  //<>// //<>//
+ //<>//
+void vaegge() { //<>//
+  if (paddel.y - 10 < H2) {  //<>//
     paddel.y = H2 + 10;
   }
-  if (paddel.y + 10 > H) {  //<>// //<>//
+  if (paddel.y + 10 > H) {  //<>//
     paddel.y = H - 10;
   }
 }
