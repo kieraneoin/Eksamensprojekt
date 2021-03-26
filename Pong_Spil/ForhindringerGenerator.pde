@@ -23,10 +23,10 @@ class ForhindringerGenerator {
 
   void collideDetection() {
     for (Forhindring f : liste) {
-    if (bold.venstre() < f.xPos && bold.yPos > paddel.op()+90 && bold.yPos < paddel.ned()+20) {
-      //bold.xSpeed = -bold.xSpeed;
-      //bold.xSpeed += 2;
-      //bold.ySpeed = random(-10, 10);
+    if (bold.venstre() == f.xPos && bold.yPos > paddel.op() || bold.hojre() == f.xPos) {
+      bold.xSpeed = -bold.xSpeed;
+      bold.xSpeed += 2;
+      bold.ySpeed = random(-10, 10);
       println("Forhindring ramt");
       }
     }
