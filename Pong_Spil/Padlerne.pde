@@ -3,6 +3,8 @@ class Padlerne {
   PImage terrorist;
   PImage jetpack;
   PImage explosion;
+  PImage jetpackSoldat;
+  PImage explosionSoldat;
 
   float x;
   float y;
@@ -32,6 +34,7 @@ class Padlerne {
   void tegnSoldat() {
     image(soldier, 1330, bold.yPos-60, 150, 150);
     rect(x+1130, bold.yPos, 20, 110);
+   
   }
 
 
@@ -44,6 +47,12 @@ class Padlerne {
       image(jetpack, x-40, y, 50, 50);
       image(explosion, x-55, y+40, 40, 40);
     }
+    
+    if (bold.yPos <= 426) {
+      image(jetpackSoldat, 1403, bold.yPos-30,50,50);
+      image(explosionSoldat, 1425, bold.yPos+13, 40, 40);
+    }
+    
 
     if (keyPressed && keyCode== DOWN) {
       y += 10;

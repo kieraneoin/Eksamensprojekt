@@ -1,4 +1,4 @@
-//Globale Variabler //<>// //<>// //<>// //<>// //<>// //<>// //<>//
+//Globale Variabler //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
 PImage background;
 PImage soldier;
 PImage moske;
@@ -26,6 +26,8 @@ void setup() {
   soldier = loadImage("Soldat.png");
   paddel.jetpack = loadImage("jetpack.png");
   paddel.explosion = loadImage("explosion.png");
+  paddel.jetpackSoldat = loadImage("jetpackSoldat.png");
+  paddel.explosionSoldat = loadImage("explosionSoldat.png");
   moske = loadImage("moské.png");
   barak = loadImage("barak.png");
 
@@ -37,7 +39,7 @@ void setup() {
 void draw() {
   clear();
   image(background, 0, 0);
-  paddel.moveTerrorist();
+  paddel.moveTerrorist(); //<>//
   paddel.tegnTerrorist();
   soldat.tegnSoldat(); //<>//
   tegnbaser();
@@ -53,11 +55,11 @@ void draw() {
 
   if (FG.antalForhindringer == 0) {
     FG.lavAntal(3);
-  }
- //<>//
+  } //<>//
+ //<>// //<>//
   FG.display(); //<>//
   FG.collideDetection();
-}
+} //<>//
  //<>//
 void vaegge() { //<>//
   if (paddel.y - 10 < H2) {  //<>//
