@@ -63,8 +63,7 @@ class Padlerne {
     // COllIDE MED TERRORIST
     if (bold.venstre() < paddel.hojre() && bold.yPos > paddel.op()+90 && bold.yPos < paddel.ned()+20) {
       bold.xSpeed = -bold.xSpeed;
-      bold.xSpeed += 2;
-      bold.ySpeed = random(-10, 10);
+      bold.ySpeed = random(-bold.ySpeed*2, bold.ySpeed*2);
     }
     // COLLIDE MED SOLDAT
     if (bold.hojre() > soldat.venstre()+70) {

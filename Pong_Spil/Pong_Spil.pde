@@ -1,4 +1,4 @@
-//Globale Variabler //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
+//Globale Variabler //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
 PImage background;
 PImage soldier;
 PImage moske;
@@ -14,6 +14,8 @@ int H2 = 0;
 
 int startTime = 0;
 int time = 0;
+
+int scene = 1;
 
 void setup() {
   size(1600, 900);
@@ -32,40 +34,46 @@ void setup() {
   barak = loadImage("barak.png");
 
   bold= new Bold(width/2, height/2, 30);
-  bold.xSpeed = 5;
-  bold.ySpeed = random(-3, 3);
 }
 
 void draw() {
   clear();
-  image(background, 0, 0);
-  paddel.moveTerrorist(); //<>//
-  paddel.tegnTerrorist();
-  soldat.tegnSoldat(); //<>//
-  tegnbaser();
-  vaegge(); //<>//
-  bold.display();
-  bold.move();
-  bold.udForSkaerm();
-  paddel.collide();
+println(bold.voidSpeedCheck);
+  //if (scene == 1) {
+    
+    image(background, 0, 0);
+    paddel.moveTerrorist();
+    paddel.tegnTerrorist();
+    soldat.tegnSoldat();
+    tegnbaser();
+    vaegge();
+    bold.display();
+    bold.move();
+    bold.udForSkaerm();
+    paddel.collide();
+    if (bold.voidSpeedCheck == 0){
+     bold.speed(5);
+     bold.voidSpeedCheck = 1;
+    }
 
-  time = millis()/1000 - startTime;
-  textSize(32);
-  text(time, 1500, 100);
 
-  if (FG.antalForhindringer == 0) {
-    FG.lavAntal(3);
-  } //<>//
- //<>// //<>//
-  FG.display(); //<>//
-  FG.collideDetection();
-} //<>//
- //<>//
-void vaegge() { //<>//
-  if (paddel.y - 10 < H2) {  //<>//
+    time = millis()/1000 - startTime;
+    textSize(32);
+    text(time, 1500, 100);
+    //Forhindrings Generator
+    if (FG.antalForhindringer == 0) {
+      FG.lavAntal(3);
+    }
+    FG.display();
+    FG.collideDetection();
+  //}
+}
+
+void vaegge() {
+  if (paddel.y - 10 < H2) { 
     paddel.y = H2 + 10;
   }
-  if (paddel.y + 10 > H) {  //<>//
+  if (paddel.y + 10 > H) { 
     paddel.y = H - 10;
   }
 }

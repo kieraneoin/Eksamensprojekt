@@ -4,6 +4,7 @@ class Bold {
   float xSpeed;
   float ySpeed;
   float diameter;
+  float voidSpeedCheck;
 
   Bold(float xP, float yP, float d) {
     xPos = xP;
@@ -24,6 +25,11 @@ class Bold {
 
     // if (xPos < 100 || xPos > 1100) {
     // println("gayboi");
+  }
+
+  void speed(float speed){
+    xSpeed = speed;
+    ySpeed = random(-speed/1.5, speed/1.5);
   }
 
   float venstre() {
