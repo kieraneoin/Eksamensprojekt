@@ -46,7 +46,7 @@ void setup() {
 void draw() {
   clear();
 println(bold.voidSpeedCheck);
-  //if (scene == 1) {
+  if (scene == 1) {
     
     image(background, 0, 0);
     paddel.moveTerrorist();
@@ -73,7 +73,7 @@ println(bold.voidSpeedCheck);
     }
     FG.display();
     FG.collideDetection();
-  //}
+  }
 }
 
 void vaegge() {
