@@ -16,7 +16,7 @@ class Bold {
   void display() {
 
     ellipse(xPos, yPos, diameter, diameter);
-    println("Gayboi");
+
   }
 
   void move() {
@@ -24,7 +24,7 @@ class Bold {
     yPos = yPos + ySpeed;
 
     // if (xPos < 100 || xPos > 1100) {
-     println("gayboi");
+     println("gay retard");
   }
 
   float venstre() {
