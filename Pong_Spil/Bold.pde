@@ -23,9 +23,6 @@ class Bold {
     yPos = yPos + ySpeed;
 
     // if (xPos < 100 || xPos > 1100) {
-    //println("FUCK MEEEEEE");
-
-     
   }
 
   float venstre() {

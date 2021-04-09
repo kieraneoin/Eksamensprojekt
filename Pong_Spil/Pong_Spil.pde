@@ -1,4 +1,4 @@
-//Globale Variabler //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
+//Globale Variabler //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
 PImage background;
 PImage soldier;
 PImage moske;
@@ -7,6 +7,7 @@ PImage barak;
 Padlerne paddel;
 Padlerne soldat;
 Bold bold;
+WinLose WL;
 ForhindringerGenerator FG = new ForhindringerGenerator();
 
 int H = 790;
@@ -34,38 +35,40 @@ void setup() {
   bold= new Bold(width/2, height/2, 30);
   bold.xSpeed = 5;
   bold.ySpeed = random(-3, 3);
+
+  WL = new WinLose();
 }
 
 void draw() {
   clear();
   image(background, 0, 0);
-  paddel.moveTerrorist(); //<>//
+  paddel.moveTerrorist();
   paddel.tegnTerrorist();
-  soldat.tegnSoldat(); //<>//
+  soldat.tegnSoldat();
   tegnbaser();
-  vaegge(); //<>//
+  vaegge();
   bold.display();
   bold.move();
   bold.udForSkaerm();
   paddel.collide();
-
-  time = millis()/1000 - startTime;
-  textSize(32);
-  text(time, 1500, 100);
+  WL.lose();
+  timer();
 
   if (FG.antalForhindringer == 0) {
     FG.lavAntal(3);
-  } //<>//
- //<>// //<>//
-  FG.display(); //<>//
+  }
+  //<>//
+  FG.display();
   FG.collideDetection();
-} //<>//
- //<>//
-void vaegge() { //<>//
-  if (paddel.y - 10 < H2) {  //<>//
+  
+  println(WL.lose);
+}
+
+void vaegge() {
+  if (paddel.y - 10 < H2) { 
     paddel.y = H2 + 10;
   }
-  if (paddel.y + 10 > H) {  //<>//
+  if (paddel.y + 10 > H) { 
     paddel.y = H - 10;
   }
 }
@@ -73,4 +76,13 @@ void vaegge() { //<>//
 void tegnbaser() {
   image(moske, -120, 300, 300, 300);
   image(barak, 1420, 350, 300, 300);
+}
+
+void timer() {
+  time = millis()/1000 - startTime;
+  textSize(32);
+  text(time, 1500, 100);
+  if (WL.lose==true) {
+    time = 0;
+  }
 }
