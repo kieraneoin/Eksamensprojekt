@@ -52,8 +52,6 @@ class Padlerne {
 
     //Jetpack Soldat
     if (bold.yPos <= 426) {
-      image(jetpackSoldat, 1403, bold.yPos-30, 50, 50);
-      image(explosionSoldat, 1425, bold.yPos+13, 40, 40);
     }
   }
 
