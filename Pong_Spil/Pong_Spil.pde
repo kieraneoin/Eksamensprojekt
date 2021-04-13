@@ -46,13 +46,11 @@ void setup() {
 void draw() {
   clear();
   println(bold.voidSpeedCheck);
-  //Debug
-  Debug.Debug();
 
   if (scene == 1) {
 
     image(background, 0, 0);
-    paddel.moveTerrorist();
+    paddel.moveBandit();
     paddel.tegnTerrorist();
     soldat.tegnSoldat();
     tegnbaser();
@@ -77,6 +75,17 @@ void draw() {
     FG.display();
     FG.collideDetection();
   }
+
+  //Debug
+  Debug.Debug();
+}
+
+void keyPressed() {
+    paddel.moveBanditPress();
+}
+
+void keyReleased(){
+    paddel.moveBanditRelease();
 }
 
 void vaegge() {

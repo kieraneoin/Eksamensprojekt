@@ -13,6 +13,9 @@ class Padlerne {
   float speedY;
   float speedX;
 
+  boolean moveUp = false;
+  boolean moveDown = false;
+
   Padlerne(float tempX, float tempY, float tempW, float tempH) {
     x = tempX;
     y = tempY;
@@ -23,39 +26,52 @@ class Padlerne {
   }
 
   void tegnTerrorist() {
-
     noStroke();
     //fill(0);
     //rect(x,y,20,110);
     fill(255);
     image(terrorist, x-70, y-30, 150, 150);
+
+    // Jetpack
+    if (y <= 370) {
+      image(jetpack, x-40, y, 50, 50);
+      image(explosion, x-55, y+40, 40, 40);
+    }
   }
 
   void tegnSoldat() {
     image(soldier, 1330, bold.yPos-60, 150, 150);
     rect(x+1130, bold.yPos, 20, 110);
-   
   }
 
+  void moveBandit() {
+    if (moveUp) y -= 10;
+    else y += 0;
+    if (moveDown) y += 10;
+    else y += 0;
 
-  void moveTerrorist() {
-    if (keyPressed && keyCode== UP) {
-      y -= 10;
-    }
-
-    if (y <= 370) {
-      image(jetpack, x-40, y, 50, 50);
-      image(explosion, x-55, y+40, 40, 40);
-    }
-    
+    //Jetpack Soldat
     if (bold.yPos <= 426) {
-      image(jetpackSoldat, 1403, bold.yPos-30,50,50);
+      image(jetpackSoldat, 1403, bold.yPos-30, 50, 50);
       image(explosionSoldat, 1425, bold.yPos+13, 40, 40);
     }
-    
+  }
 
-    if (keyPressed && keyCode== DOWN) {
-      y += 10;
+  void moveBanditPress() {
+    if (keyCode == UP) {
+      moveUp = true;
+    }
+    if (keyCode == DOWN) {
+      moveDown = true;
+    }
+  }
+
+  void moveBanditRelease() {
+    if (keyCode == UP) {
+      moveUp = false;
+    }
+    if (keyCode == DOWN) {
+      moveDown = false;
     }
   }
 
@@ -70,8 +86,6 @@ class Padlerne {
       bold.xSpeed = -bold.xSpeed;
     }
   }
-
-
 
   float venstre() {
     return x-w/2;
