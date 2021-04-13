@@ -41,7 +41,9 @@ class Padlerne {
 
   void tegnSoldat() {
     image(soldier, 1330, bold.yPos-60, 150, 150);
-    rect(x+1130, bold.yPos, 20, 110);
+    //rect(x+1130, bold.yPos, 20, 110);
+    
+    }
   }
 
   void moveBandit() {
@@ -52,6 +54,8 @@ class Padlerne {
 
     //Jetpack Soldat
     if (bold.yPos <= 426) {
+      image(jetpackSoldat, 1403, bold.yPos-30, 50, 50);
+      image(explosionSoldat, 1425, bold.yPos+13, 40, 40);
     }
   }
 
