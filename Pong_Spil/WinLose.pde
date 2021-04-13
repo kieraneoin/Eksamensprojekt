@@ -4,7 +4,7 @@ class WinLose {
   boolean lose;
 
   void win() {
-    if (bold.xPos >= 1330) {
+    if (bold.xPos >= 1380) {
       win = true;
       lose = false;
 

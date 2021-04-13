@@ -1,4 +1,4 @@
-//Globale Variabler //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
+//Globale Variabler //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
 PImage background;
 PImage soldier;
 PImage moske;
@@ -78,6 +78,10 @@ void draw() {
 
   //Debug
   Debug.Debug();
+  
+  //Win and Lose
+  WL.win();
+  WL.lose();
 }
 
 void keyPressed() {
