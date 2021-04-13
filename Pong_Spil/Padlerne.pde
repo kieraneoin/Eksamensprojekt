@@ -1,6 +1,6 @@
 class Padlerne {
 
-  PImage terrorist;
+  PImage bandit;
   PImage jetpack;
   PImage explosion;
   PImage jetpackSoldat;
@@ -25,18 +25,18 @@ class Padlerne {
     speedX = 0;
   }
 
-  void tegnTerrorist() {
-    noStroke();
-    //fill(0);
-    //rect(x,y,20,110);
-    fill(255);
-    image(terrorist, x-70, y-30, 150, 150);
-
-    // Jetpack
+  void tegnBandit() {
+   // Jetpack
     if (y <= 370) {
       image(jetpack, x-40, y, 50, 50);
       image(explosion, x-55, y+40, 40, 40);
     }
+    
+    noStroke();
+    //fill(0);
+    //rect(x,y,20,110);
+    fill(255);
+    image(bandit, x-70, y-30, 150, 150);
   }
 
   void tegnSoldat() {

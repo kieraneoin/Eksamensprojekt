@@ -25,7 +25,7 @@ void setup() {
   soldat = new Padlerne(1330, 500, 30, 200);
   frameRate(60);
 
-  paddel.terrorist = loadImage("terrorist.png");
+  paddel.bandit = loadImage("terrorist.png");
   background = loadImage("desert.png");
   soldier = loadImage("Soldat.png");
   paddel.jetpack = loadImage("jetpack.png");
@@ -51,7 +51,7 @@ void draw() {
 
     image(background, 0, 0);
     paddel.moveBandit();
-    paddel.tegnTerrorist();
+    paddel.tegnBandit();
     soldat.tegnSoldat();
     tegnbaser();
     vaegge();
