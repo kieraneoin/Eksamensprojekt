@@ -42,9 +42,8 @@ class Padlerne {
   void tegnSoldat() {
     image(soldier, 1330, bold.yPos-60, 150, 150);
     //rect(x+1130, bold.yPos, 20, 110);
-    
-    }
   }
+
 
   void moveBandit() {
     if (moveUp) y -= 10;
