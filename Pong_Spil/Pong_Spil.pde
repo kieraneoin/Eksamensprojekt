@@ -9,6 +9,7 @@ Padlerne soldat;
 Bold bold;
 WinLose WL;
 ForhindringerGenerator FG = new ForhindringerGenerator();
+Debug Debug = new Debug();
 
 int H = 790;
 int H2 = 0;
@@ -40,14 +41,16 @@ void setup() {
   bold.ySpeed = random(-3, 3);
 
   WL = new WinLose();
-
 }
 
 void draw() {
   clear();
-println(bold.voidSpeedCheck);
+  println(bold.voidSpeedCheck);
+  //Debug
+  Debug.Debug();
+
   if (scene == 1) {
-    
+
     image(background, 0, 0);
     paddel.moveTerrorist();
     paddel.tegnTerrorist();
@@ -58,9 +61,9 @@ println(bold.voidSpeedCheck);
     bold.move();
     bold.udForSkaerm();
     paddel.collide();
-    if (bold.voidSpeedCheck == 0){
-     bold.speed(5);
-     bold.voidSpeedCheck = 1;
+    if (bold.voidSpeedCheck == 0) {
+      bold.speed(5);
+      bold.voidSpeedCheck = 1;
     }
 
 
