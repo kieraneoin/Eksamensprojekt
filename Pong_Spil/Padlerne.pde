@@ -12,6 +12,8 @@ class Padlerne {
   float h;
   float speedY;
   float speedX;
+  
+  float miss = 100;
 
   boolean moveUp = false;
   boolean moveDown = false;
@@ -26,12 +28,12 @@ class Padlerne {
   }
 
   void tegnBandit() {
-   // Jetpack
+    // Jetpack
     if (y <= 370) {
       image(jetpack, x-40, y, 50, 50);
       image(explosion, x-55, y+40, 40, 40);
     }
-    
+
     noStroke();
     //fill(0);
     //rect(x,y,20,110);
@@ -85,6 +87,7 @@ class Padlerne {
     // COLLIDE MED SOLDAT
     if (bold.hojre() > soldat.venstre()+70) {
       bold.xSpeed = -bold.xSpeed;
+       miss =  random(-1, 3);
     }
   }
 
@@ -99,5 +102,14 @@ class Padlerne {
   }
   float ned() {
     return y+h/2;
+  }
+
+  void miss() {
+   println(miss);
+    if (miss < 1) {
+      //bold.xPos = 1400;
+      bold.xSpeed=+1000;
+      
+    }
   }
 }

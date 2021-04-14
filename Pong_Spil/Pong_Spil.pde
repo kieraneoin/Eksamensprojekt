@@ -45,13 +45,14 @@ void setup() {
 
 void draw() {
   clear();
-  println(bold.voidSpeedCheck);
+  //println(bold.voidSpeedCheck);
 
   if (scene == 1) {
 
     image(background, 0, 0);
     paddel.moveBandit();
     paddel.tegnBandit();
+    paddel.miss();
     soldat.tegnSoldat();
     tegnbaser();
     vaegge();
