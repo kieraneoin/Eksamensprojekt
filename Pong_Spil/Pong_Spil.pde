@@ -3,7 +3,7 @@ Padlerne paddel;
 Padlerne soldat;
 Bold bold;
 WinLose WL;
-ForhindringerGenerator FG = new ForhindringerGenerator();
+ForhindringerGenerator FG;
 
 //Features
 Debug Debug = new Debug();
@@ -19,19 +19,21 @@ int time = 0;
 int scene = 1;
 
 void setup() {
+  //Setup nødvendigheder
   size(1600, 900);
-  paddel = new Padlerne(200, 500, 30, 200);
-  soldat = new Padlerne(1330, 500, 30, 200);
   frameRate(60);
 
-  pic.loadBilleder();
-
+  //
+  paddel = new Padlerne(200, 500, 30, 200);
+  soldat = new Padlerne(1330, 500, 30, 200);
+  FG = new ForhindringerGenerator();
   bold= new Bold(width/2, height/2, 30);
 
-  bold.xSpeed = 5;
-  bold.ySpeed = random(-3, 3);
-
+  //Win - Loss screen
   WL = new WinLose();
+
+  //Load Billeder
+  pic.loadBilleder();
 }
 
 void draw() {
@@ -40,25 +42,29 @@ void draw() {
   if (scene == 1) {
 
     image(pic.background, 0, 0);
+    //Paddel
     paddel.moveBandit();
     paddel.tegnBandit();
     paddel.miss();
+    paddel.collide();
     soldat.tegnSoldat();
+    
+    //Baggrund
     tegnBaser();
     vaegge();
+    
+    //Bold
     bold.display();
     bold.move();
     bold.udForSkaerm();
-    paddel.collide();
     if (bold.voidSpeedCheck == 0) {
       bold.speed(5);
       bold.voidSpeedCheck = 1;
     }
 
-
-    time = millis()/1000 - startTime;
-    textSize(32);
-    text(time, 1500, 100);
+    //Timer
+    timer();
+    
     //Forhindrings Generator
     if (FG.antalForhindringer == 0) {
       FG.lavAntal(3);
@@ -69,18 +75,18 @@ void draw() {
 
   //Debug
   Debug.Debug();
-  
+
   //Win and Lose
   WL.win();
   WL.lose();
 }
 
 void keyPressed() {
-    paddel.moveBanditPress();
+  paddel.moveBanditPress();
 }
 
-void keyReleased(){
-    paddel.moveBanditRelease();
+void keyReleased() {
+  paddel.moveBanditRelease();
 }
 
 void vaegge() {

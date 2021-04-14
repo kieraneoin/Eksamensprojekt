@@ -28,7 +28,7 @@ class Bold {
 
   void speed(float speed){
     xSpeed = speed;
-    ySpeed = random(-speed/1.5, speed/1.5);
+    ySpeed = random(-xSpeed/1.5, xSpeed/1.5);
   }
 
   float venstre() {
