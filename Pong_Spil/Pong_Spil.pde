@@ -1,16 +1,15 @@
-//Globale Variabler //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
-PImage background;
-PImage soldier;
-PImage moske;
-PImage barak;
-
+//Objekter //<>//
 Padlerne paddel;
 Padlerne soldat;
 Bold bold;
 WinLose WL;
 ForhindringerGenerator FG = new ForhindringerGenerator();
-Debug Debug = new Debug();
 
+//Features
+Debug Debug = new Debug();
+Billeder pic = new Billeder();
+
+//Variabler
 int H = 790;
 int H2 = 0;
 
@@ -25,15 +24,7 @@ void setup() {
   soldat = new Padlerne(1330, 500, 30, 200);
   frameRate(60);
 
-  paddel.bandit = loadImage("terrorist.png");
-  background = loadImage("desert.png");
-  soldier = loadImage("Soldat.png");
-  paddel.jetpack = loadImage("jetpack.png");
-  paddel.explosion = loadImage("explosion.png");
-  paddel.jetpackSoldat = loadImage("jetpackSoldat.png");
-  paddel.explosionSoldat = loadImage("explosionSoldat.png");
-  moske = loadImage("moské.png");
-  barak = loadImage("barak.png");
+  pic.loadBilleder();
 
   bold= new Bold(width/2, height/2, 30);
 
@@ -45,16 +36,15 @@ void setup() {
 
 void draw() {
   clear();
-  //println(bold.voidSpeedCheck);
 
   if (scene == 1) {
 
-    image(background, 0, 0);
+    image(pic.background, 0, 0);
     paddel.moveBandit();
     paddel.tegnBandit();
     paddel.miss();
     soldat.tegnSoldat();
-    tegnbaser();
+    tegnBaser();
     vaegge();
     bold.display();
     bold.move();
@@ -102,9 +92,9 @@ void vaegge() {
   }
 }
 
-void tegnbaser() {
-  image(moske, -120, 300, 300, 300);
-  image(barak, 1420, 350, 300, 300);
+void tegnBaser() {
+  image(pic.moske, -120, 300, 300, 300);
+  image(pic.barak, 1420, 350, 300, 300);
 }
 
 void timer() {

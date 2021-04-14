@@ -1,11 +1,5 @@
 class Padlerne {
 
-  PImage bandit;
-  PImage jetpack;
-  PImage explosion;
-  PImage jetpackSoldat;
-  PImage explosionSoldat;
-
   float x;
   float y;
   float w;
@@ -30,19 +24,19 @@ class Padlerne {
   void tegnBandit() {
     // Jetpack
     if (y <= 370) {
-      image(jetpack, x-40, y, 50, 50);
-      image(explosion, x-55, y+40, 40, 40);
+      image(pic.jetpack, x-40, y, 50, 50);
+      image(pic.explosion, x-55, y+40, 40, 40);
     }
 
     noStroke();
     //fill(0);
     //rect(x,y,20,110);
     fill(255);
-    image(bandit, x-70, y-30, 150, 150);
+    image(pic.bandit, x-70, y-30, 150, 150);
   }
 
   void tegnSoldat() {
-    image(soldier, 1330, bold.yPos-60, 150, 150);
+    image(pic.soldier, 1330, bold.yPos-60, 150, 150);
     //rect(x+1130, bold.yPos, 20, 110);
   }
 
@@ -55,8 +49,8 @@ class Padlerne {
 
     //Jetpack Soldat
     if (bold.yPos <= 426) {
-      image(jetpackSoldat, 1403, bold.yPos-30, 50, 50);
-      image(explosionSoldat, 1425, bold.yPos+13, 40, 40);
+      image(pic.jetpackSoldat, 1403, bold.yPos-30, 50, 50);
+      image(pic.explosionSoldat, 1425, bold.yPos+13, 40, 40);
     }
   }
 
