@@ -1,5 +1,5 @@
 class WinLose {
-
+//booleans
   boolean win;
   boolean lose;
 
@@ -12,8 +12,8 @@ class WinLose {
       fill(random(0, 255), random(0, 255), random(0, 255));
       text("YOU WIN", 600, height/2);
       fill(255);
-      
-            bold.xPos =+ 10000;
+
+      bold.xPos =+ 10000;
       bold.yPos =+ 10000;
       paddel.x =+ 10000;
       paddel.y =+ 10000;

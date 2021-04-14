@@ -1,4 +1,5 @@
 class Forhindring {
+  //Variabler til Forhindringer
   int xPos = int(random(250, width - 250));
   int yPos = int(random(10, height - 120));
   int brede = 30;

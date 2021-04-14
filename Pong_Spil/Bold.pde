@@ -1,4 +1,5 @@
 class Bold {
+  //Variabler
   float xPos;
   float yPos;
   float xSpeed;
@@ -9,28 +10,23 @@ class Bold {
   Bold(float xP, float yP, float d) {
     xPos = xP;
     yPos = yP;
-    xSpeed = 0;
-    ySpeed = 0;
     diameter = d;
   }
 
   void display() {
-
     ellipse(xPos, yPos, diameter, diameter);
   }
 
   void move() {
     xPos = xPos + xSpeed;
     yPos = yPos + ySpeed;
-
-    // if (xPos < 100 || xPos > 1100) {
   }
 
   void speed(float speed){
     xSpeed = speed;
     ySpeed = random(-xSpeed/1.5, xSpeed/1.5);
   }
-
+  //Hjælpe Variabler
   float venstre() {
     return xPos-diameter/2;
   }

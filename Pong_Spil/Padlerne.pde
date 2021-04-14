@@ -1,14 +1,15 @@
 class Padlerne {
 
+  //Variabler
   float x;
   float y;
   float w;
   float h;
   float speedY;
   float speedX;
-  
   float miss = 100;
 
+  //booleans
   boolean moveUp = false;
   boolean moveDown = false;
 
@@ -39,7 +40,6 @@ class Padlerne {
     image(pic.soldier, 1330, bold.yPos-60, 150, 150);
     //rect(x+1130, bold.yPos, 20, 110);
   }
-
 
   void moveBandit() {
     if (moveUp) y -= 10;
@@ -81,7 +81,7 @@ class Padlerne {
     // COLLIDE MED SOLDAT
     if (bold.hojre() > soldat.venstre()+70) {
       bold.xSpeed = -bold.xSpeed;
-       miss =  random(-1, 3);
+      miss =  random(-1, 3);
     }
   }
 
@@ -99,11 +99,10 @@ class Padlerne {
   }
 
   void miss() {
-   println(miss);
+    println(miss);
     if (miss < 1) {
       //bold.xPos = 1400;
       bold.xSpeed=+1000;
-      
     }
   }
 }

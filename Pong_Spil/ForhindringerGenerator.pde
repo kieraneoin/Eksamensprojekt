@@ -1,10 +1,9 @@
 class ForhindringerGenerator {
+  //ArrayListe
   ArrayList<Forhindring> liste = new ArrayList<Forhindring>();
 
+  //Variabler
   int antalForhindringer;
-
-  ForhindringerGenerator() {
-  }
 
   void lavAntal(int antal) {
     liste.clear();
@@ -28,13 +27,6 @@ class ForhindringerGenerator {
         println("Forhindring ramt");
         bold.xSpeed = -bold.xSpeed;
       }
-      /*
-    if (bold.venstre() == f.xPos && bold.yPos > paddel.op() || bold.hojre() == f.xPos) {
-       bold.xSpeed = -bold.xSpeed;
-       bold.xSpeed += 2;
-       bold.ySpeed = random(-10, 10);
-       println("Forhindring ramt");
-       }*/
     }
   }
 }
