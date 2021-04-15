@@ -4,6 +4,7 @@ Padlerne soldat;
 Bold bold;
 WinLose WL;
 ForhindringerGenerator FG;
+Menu m;
 
 //Features
 Debug Debug = new Debug();
@@ -16,7 +17,7 @@ int H2 = 0;
 int startTime = 0;
 int time = 0;
 
-int scene = 1;
+int scene = 0;
 
 void setup() {
   //Setup nødvendigheder
@@ -28,6 +29,7 @@ void setup() {
   soldat = new Padlerne(1330, 500, 30, 200);
   FG = new ForhindringerGenerator();
   bold= new Bold(width/2, height/2, 30);
+  m = new Menu();
 
   //Win - Loss screen
   WL = new WinLose();
@@ -38,10 +40,22 @@ void setup() {
 
 void draw() {
   clear();
+  if (scene==0) {
+    m.display();
+    m.klik();
+  }
+
+
+
   if (scene == 1) {
-
-
     image(pic.background, 0, 0);
+    m.pause();
+    if (mousePressed) {
+      if (mouseX >= 20 && mouseX <= 50 && mouseY >= 20 && mouseY <= 50) {
+        m.home();
+      }
+    }
+
     //Paddel
     paddel.moveBandit();
     paddel.tegnBandit();
@@ -61,7 +75,6 @@ void draw() {
       bold.speed(5);
       bold.voidSpeedCheck = 1;
     }
-
     //Timer
     timer();
 
@@ -71,13 +84,25 @@ void draw() {
     }
     FG.display();
     FG.collideDetection();
+
+    WL.lose();
+  }
+
+  if (scene == 2) {
+    m.rules();
+    rect(20, 20, 30, 30);
+    fill(0);
+    text("<", 20, 44);
+    fill(255);
+    if (mousePressed) {
+      if (mouseX >= 20 && mouseX <= 50 && mouseY >= 20 && mouseY <= 50) {
+        m.home();
+      }
+    }
   }
 
   //Debug
   Debug.Debug();
-
-  //Lose
-  WL.lose();
 }
 
 void keyPressed() {
