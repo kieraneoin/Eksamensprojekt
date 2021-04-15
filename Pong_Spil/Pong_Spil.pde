@@ -85,7 +85,9 @@ void draw() {
     FG.display();
     FG.collideDetection();
 
-    WL.lose();
+    if (bold.xPos <= 150) {
+      scene = 3;
+    }
   }
 
   if (scene == 2) {
@@ -99,6 +101,10 @@ void draw() {
         m.home();
       }
     }
+  }
+
+  if (scene == 3) {
+    WL.lose();
   }
 
   //Debug
