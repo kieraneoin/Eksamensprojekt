@@ -12,7 +12,7 @@ class Padlerne {
   float soldatY;
   float soldatRyk;
   int spillerRamt;
-  int spillerRamtSvar = 10;
+  int spillerRamtSvar = 5;
 
   //booleans
   boolean moveUp = false;
