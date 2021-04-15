@@ -23,7 +23,7 @@ class ForhindringerGenerator {
   void collideDetection() {
     for (Forhindring f : liste) {
       //AA BB colloision 
-      if (bold.xPos > f.xPos && bold.xPos < f.xPos + f.brede && bold.yPos > f.yPos && bold.yPos < f.yPos + f.hoejde) {
+      if (bold.xPos+18 > f.xPos && bold.xPos+10 < f.xPos + f.brede && bold.yPos > f.yPos && bold.yPos < f.yPos + f.hoejde-50) {
         println("Forhindring ramt");
         bold.xSpeed = -bold.xSpeed;
       }
