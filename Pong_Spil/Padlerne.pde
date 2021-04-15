@@ -39,8 +39,15 @@ class Padlerne {
   }
 
   void tegnSoldat() {
-    soldatY = bold.yPos-60 + soldatRyk;
-    image(pic.soldier, soldatX, soldatY, 150, 150);
+    soldatY = bold.yPos + soldatRyk;
+
+    //Soldat Jetpack
+    if (bold.yPos <= 426) {
+      image(pic.jetpackSoldat, 1403, soldatY-30, 50, 50);
+      image(pic.explosionSoldat, 1425, soldatY+13, 40, 40);
+    }
+    //Soldat
+    image(pic.soldier, soldatX, soldatY-60, 150, 150);
   }
 
   void moveBandit() {
@@ -48,12 +55,6 @@ class Padlerne {
     else y += 0;
     if (moveDown) y += 10;
     else y += 0;
-
-    //Jetpack Soldat
-    if (bold.yPos <= 426) {
-      image(pic.jetpackSoldat, 1403, bold.yPos-30, 50, 50);
-      image(pic.explosionSoldat, 1425, bold.yPos+13, 40, 40);
-    }
   }
 
   void moveBanditPress() {
@@ -85,6 +86,12 @@ class Padlerne {
     if (bold.hojre() > soldat.venstre()+70) {
       bold.xSpeed = -bold.xSpeed;
       miss =  random(-1, 3000000);
+
+      if (spillerRamt >= 1) {
+        WL.win();
+        println("hej");
+        println(spillerRamt);
+      }
     }
   }
 
@@ -102,13 +109,13 @@ class Padlerne {
   }
 
   void miss() {
-    //   println(miss);
-    println(spillerRamt);
     if (spillerRamt == 1 ) {
       // bold.xSpeed=+1000;
       soldat.soldatRyk = soldat.soldatRyk+0.5;
     } 
-    if (soldat.soldatRyk >= bold.diameter) {
+    if (soldat.soldatRyk >= bold.diameter*2.5 && spillerRamt == 1) {
+      soldat.soldatRyk = soldat.soldatRyk-0.5;
+    } else {
       soldat.soldatRyk = soldat.soldatRyk;
     }
   }

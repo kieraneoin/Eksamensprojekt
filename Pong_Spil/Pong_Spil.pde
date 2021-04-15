@@ -38,10 +38,8 @@ void setup() {
 
 void draw() {
   clear();
-  println("bold "+bold.diameter);
-    println("soldat "+soldat.soldatRyk);
   if (scene == 1) {
-   
+
 
     image(pic.background, 0, 0);
     //Paddel
@@ -78,8 +76,7 @@ void draw() {
   //Debug
   Debug.Debug();
 
-  //Win and Lose
-  WL.win();
+  //Lose
   WL.lose();
 }
 
