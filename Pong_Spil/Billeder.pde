@@ -12,6 +12,7 @@ class Billeder {
   PImage explosion;
   PImage jetpackSoldat;
   PImage explosionSoldat;
+  PImage bomb;
 
   //Load Billeder
   void loadBilleder() {
@@ -24,5 +25,6 @@ class Billeder {
     explosionSoldat = loadImage("explosionSoldat.png");
     moske = loadImage("moské.png");
     barak = loadImage("barak.png");
+    bomb = loadImage("bomb.png");
   }
 }

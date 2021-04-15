@@ -14,7 +14,8 @@ class Bold {
   }
 
   void display() {
-    ellipse(xPos, yPos, diameter, diameter);
+    //ellipse(xPos, yPos, diameter, diameter);
+    image(pic.bomb, xPos-17, yPos-25);
   }
 
   void move() {
