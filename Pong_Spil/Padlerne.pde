@@ -85,7 +85,7 @@ class Padlerne {
     // COLLIDE MED SOLDAT
     if (bold.hojre() > soldat.venstre()+70) {
       bold.xSpeed = -bold.xSpeed;
-      miss =  random(-1, 3000000);
+   
 
       if (spillerRamt >= 1) {
         WL.win();
