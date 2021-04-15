@@ -10,7 +10,6 @@ class Menu {
     rect(675, 500, 250, 100);
     rect(675, 650, 250, 100);
 
-
     //text
     textSize(32);
     fill(0);
