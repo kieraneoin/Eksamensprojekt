@@ -12,6 +12,7 @@ class Padlerne {
   float soldatY;
   float soldatRyk;
   int spillerRamt;
+  int spillerRamtSvar = 10;
 
   //booleans
   boolean moveUp = false;
@@ -86,8 +87,7 @@ class Padlerne {
     if (bold.hojre() > soldat.venstre()+70) {
       bold.xSpeed = -bold.xSpeed;
    
-
-      if (spillerRamt >= 1) {
+      if (spillerRamt >= spillerRamtSvar) {
         WL.win();
         println("hej");
         println(spillerRamt);
@@ -109,7 +109,7 @@ class Padlerne {
   }
 
   void miss() {
-    if (spillerRamt == 1 ) {
+    if (spillerRamt == spillerRamtSvar ) {
       // bold.xSpeed=+1000;
       soldat.soldatRyk = soldat.soldatRyk+0.5;
     } 
