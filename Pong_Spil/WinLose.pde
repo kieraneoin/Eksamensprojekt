@@ -12,6 +12,7 @@ class WinLose {
     fill(random(0, 255), random(0, 255), random(0, 255));
     text("YOU WIN", 600, height/2);
     fill(255);
+    textSize(32);
 
     bold.xPos =+ 10000;
     bold.yPos =+ 10000;
@@ -33,6 +34,7 @@ class WinLose {
       fill(random(0, 255), random(0, 255), random(0, 255));
       text("YOU LOSE", 600, height/2);
       fill(255);
+      textSize(32);
     }
   }
 }
