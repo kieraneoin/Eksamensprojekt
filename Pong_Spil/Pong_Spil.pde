@@ -38,8 +38,10 @@ void setup() {
 
 void draw() {
   clear();
-
+  println("bold "+bold.diameter);
+    println("soldat "+soldat.soldatRyk);
   if (scene == 1) {
+   
 
     image(pic.background, 0, 0);
     //Paddel
@@ -48,11 +50,11 @@ void draw() {
     paddel.miss();
     paddel.collide();
     soldat.tegnSoldat();
-    
+
     //Baggrund
     tegnBaser();
     vaegge();
-    
+
     //Bold
     bold.display();
     bold.move();
@@ -64,7 +66,7 @@ void draw() {
 
     //Timer
     timer();
-    
+
     //Forhindrings Generator
     if (FG.antalForhindringer == 0) {
       FG.lavAntal(3);

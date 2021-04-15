@@ -8,6 +8,10 @@ class Padlerne {
   float speedY;
   float speedX;
   float miss = 100;
+  float soldatX = 1330;
+  float soldatY;
+  float soldatRyk;
+  int spillerRamt;
 
   //booleans
   boolean moveUp = false;
@@ -30,15 +34,13 @@ class Padlerne {
     }
 
     noStroke();
-    //fill(0);
-    //rect(x,y,20,110);
     fill(255);
     image(pic.bandit, x-70, y-30, 150, 150);
   }
 
   void tegnSoldat() {
-    image(pic.soldier, 1330, bold.yPos-60, 150, 150);
-    //rect(x+1130, bold.yPos, 20, 110);
+    soldatY = bold.yPos-60 + soldatRyk;
+    image(pic.soldier, soldatX, soldatY, 150, 150);
   }
 
   void moveBandit() {
@@ -73,15 +75,16 @@ class Padlerne {
   }
 
   void collide() {
-    // COllIDE MED TERRORIST
+    // COllIDE MED BANDIT
     if (bold.venstre() < paddel.hojre() && bold.yPos > paddel.op()+90 && bold.yPos < paddel.ned()+20) {
       bold.xSpeed = -bold.xSpeed;
       bold.ySpeed = random(-bold.ySpeed*2, bold.ySpeed*2);
+      spillerRamt++;
     }
     // COLLIDE MED SOLDAT
     if (bold.hojre() > soldat.venstre()+70) {
       bold.xSpeed = -bold.xSpeed;
-      miss =  random(-1, 3);
+      miss =  random(-1, 3000000);
     }
   }
 
@@ -99,10 +102,14 @@ class Padlerne {
   }
 
   void miss() {
-    println(miss);
-    if (miss < 1) {
-      //bold.xPos = 1400;
-      bold.xSpeed=+1000;
+    //   println(miss);
+    println(spillerRamt);
+    if (spillerRamt == 1 ) {
+      // bold.xSpeed=+1000;
+      soldat.soldatRyk = soldat.soldatRyk+0.5;
+    } 
+    if (soldat.soldatRyk >= bold.diameter) {
+      soldat.soldatRyk = soldat.soldatRyk;
     }
   }
 }
