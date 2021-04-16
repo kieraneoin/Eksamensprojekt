@@ -10,7 +10,9 @@ class WinLose {
 
     textSize(64);
     fill(random(0, 255), random(0, 255), random(0, 255));
-    text("YOU WIN", 600, height/2);
+    textAlign(CENTER);
+    text("YOU WIN", 800, 2);
+    textAlign(LEFT);
     fill(255);
     textSize(32);
 
@@ -65,11 +67,6 @@ class WinLose {
     textAlign(LEFT);
     fill(255);
     textSize(32);
-
-    //menu knap
-    rect(20, 20, 30, 30);
-    fill(0);
-    text("<", 20, 44);
 
     //knapper
     fill(255);
