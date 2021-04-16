@@ -77,22 +77,24 @@ class WinLose {
     rect(675, 650, 250, 100);
     fill(0);
 
-    //Text
+    //Knap Text
     text("Try Again", 730, 411);
     text("Main Menu", 725, 561);
     text("Exit", 765, 711);
     fill(255);
-    if (mousePressed) {
-      if (mouseX >=675 && mouseX <= 925 && mouseY >= 350 && mouseY <= 450) {
-        reset();
-      }
+  }
 
-      if (mouseX >=675 && mouseX <= 925 && mouseY >= 500 && mouseY <= 600) {
-        m.home();
-      }
-      if (mouseX >=675 && mouseX <= 925 && mouseY >= 650 && mouseY <= 750) {
-        exit();
-      }
+  void loseKnap() {
+    if (mouseX >=675 && mouseX <= 925 && mouseY >= 350 && mouseY <= 450) {
+      reset();
+    }
+
+    if (mouseX >=675 && mouseX <= 925 && mouseY >= 500 && mouseY <= 600) {
+      m.home();
+    }
+    
+    if (mouseX >=675 && mouseX <= 925 && mouseY >= 650 && mouseY <= 750) {
+      exit();
     }
   }
 }

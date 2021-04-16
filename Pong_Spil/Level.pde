@@ -4,11 +4,6 @@ class Level {
   void level1() {
     image(pic.background, 0, 0);
     m.pause();
-    if (mousePressed) {
-      if (mouseX >= 20 && mouseX <= 50 && mouseY >= 20 && mouseY <= 50) {
-        m.home();
-      }
-    }
 
     //Paddel
     paddel.moveBandit();
@@ -49,15 +44,16 @@ class Level {
     }
   } 
 
+  void level1Knap() {
+    if (mouseX >= 20 && mouseX <= 50 && mouseY >= 20 && mouseY <= 50) {
+      m.home();
+    }
+  }
+
   //////////////////////////////////////////Level 2   
   void level2() {
     image(pic.background, 0, 0);
     m.pause();
-    if (mousePressed) {
-      if (mouseX >= 20 && mouseX <= 50 && mouseY >= 20 && mouseY <= 50) {
-        m.home();
-      }
-    }
 
     //Paddel
     paddel.moveBandit();
@@ -98,14 +94,15 @@ class Level {
     }
   }
 
+  void level2Knap() {
+    if (mouseX >= 20 && mouseX <= 50 && mouseY >= 20 && mouseY <= 50) {
+      m.home();
+    }
+  }
+
   void level3() {
     image(pic.background, 0, 0);
     m.pause();
-    if (mousePressed) {
-      if (mouseX >= 20 && mouseX <= 50 && mouseY >= 20 && mouseY <= 50) {
-        m.home();
-      }
-    }
 
     //Paddel
     paddel.moveBandit();
@@ -143,6 +140,12 @@ class Level {
 
     if (bold.xPos <= 150) {
       scene = 5;
+    }
+  }
+
+  void level3Knap() {
+    if (mouseX >= 20 && mouseX <= 50 && mouseY >= 20 && mouseY <= 50) {
+      m.home();
     }
   }
 }

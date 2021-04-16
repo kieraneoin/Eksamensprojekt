@@ -1,4 +1,4 @@
-//Objekter //<>// //<>// //<>// //<>// //<>// //<>//
+//Objekter //<>// //<>// //<>// //<>// //<>// //<>// //<>//
 Padlerne paddel;
 Padlerne soldat;
 Bold bold;
@@ -45,7 +45,6 @@ void draw() {
   println(scene);
   if (scene==0) {
     m.display();
-    m.klik();
   }
 
   if (scene == 1) {
@@ -66,11 +65,6 @@ void draw() {
     fill(0);
     text("<", 20, 44);
     fill(255);
-    if (mousePressed) {
-      if (mouseX >= 20 && mouseX <= 50 && mouseY >= 20 && mouseY <= 50) {
-        m.home();
-      }
-    }
   }
 
   if (scene == 5) {
@@ -87,6 +81,23 @@ void keyPressed() {
 
 void keyReleased() {
   paddel.moveBanditRelease();
+}
+
+void mouseClicked() {
+  //Scene inddeling
+  if (scene == 0) {
+    m.menuKlik();
+  } else if (scene == 1) {
+    Lvl.level1Knap();
+  } else if (scene == 2) {
+    Lvl.level2Knap();
+  } else if (scene == 3) {
+    Lvl.level3Knap();
+  } else if (scene == 4) {
+    m.tilbageKnap();
+  } else if (scene == 5) {
+    WL.loseKnap();
+  }
 }
 
 void vaegge() {

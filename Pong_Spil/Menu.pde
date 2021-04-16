@@ -20,26 +20,28 @@ class Menu {
     fill(255);
   }
 
-  void klik() {
+  void menuKlik() {
     //Start spil
-    if (mousePressed) {
-      if (mouseX >=675 && mouseX <= 925 && mouseY >= 350 && mouseY <= 450) {
-        scene = 1;
-      }
-      //Regler
-      if (mouseX >=675 && mouseX <= 925 && mouseY >= 500 && mouseY <= 600) {
-        scene = 4;
-      }
-      //Quit
-      if (mouseX >=675 && mouseX <= 925 && mouseY >= 650 && mouseY <= 750) {
-        exit();
-      }
-      //Home/pause
-      if (mouseX >= 20 && mouseX <= 50 && mouseY >= 20 && mouseY <= 50) {
-        home();
-      }
+    if (mouseX >=675 && mouseX <= 925 && mouseY >= 350 && mouseY <= 450) {
+      scene = 1;
+    }
+    //Regler
+    if (mouseX >=675 && mouseX <= 925 && mouseY >= 500 && mouseY <= 600) {
+      scene = 4;
+    }
+    //Quit
+    if (mouseX >=675 && mouseX <= 925 && mouseY >= 650 && mouseY <= 750) {
+      exit();
     }
   }
+
+  void tilbageKnap() {
+    //Home/pause
+    if (mouseX >= 20 && mouseX <= 50 && mouseY >= 20 && mouseY <= 50) {
+      home();
+    }
+  }
+
   void rules() {
     image(pic.background, 0, 0);
     textAlign(CENTER);
