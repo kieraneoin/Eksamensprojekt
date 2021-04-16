@@ -30,14 +30,14 @@ class WinLose {
     fill(255);
   }
 
-  void winKnap() {
-    //Next level
-    if (mouseX >=675 && mouseX <= 925 && mouseY >= 350 && mouseY <= 450) {
-      scene = nextLevel;
-      levelReset();
+  void winKnap() { //<>//
+    //Next level //<>//
+    if (mouseX >=675 && mouseX <= 925 && mouseY >= 350 && mouseY <= 450) { //<>//
+      scene = nextLevel; //<>//
+      levelReset(); //<>//
     }
     // Main menu
-    if (mouseX >=675 && mouseX <= 925 && mouseY >= 500 && mouseY <= 600) {
+    if (mouseX >=675 && mouseX <= 925 && mouseY >= 500 && mouseY <= 600) { //<>//
       m.home();
     }
     //Quit

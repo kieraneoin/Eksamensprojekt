@@ -44,7 +44,7 @@ void setup() {
 
 void draw() {
   clear();
-  println(paddel.spillerRamt);
+  println(FG.antalForhindringer);
   if (scene==0) {
     m.display();
   }
@@ -118,29 +118,30 @@ void tegnBaser() {
   image(pic.barak, 1420, 350, 300, 300);
 }
 
-void levelReset() {
-  //Paddel
-  paddel.spillerRamt = 0;
-  soldat.soldatRyk = 0;
-  paddel.spillerRamtSvarCheck = 0;
+void levelReset() { //<>//
+  //Paddel //<>//
+  paddel.spillerRamt = 0; //<>//
+  soldat.soldatRyk = 0; //<>//
+  paddel.spillerRamtSvarCheck = 0; //<>//
 
-  //Bold
-  bold.xPos = bold.startXPos;
-  bold.yPos = bold.startYPos;
-  bold.voidSpeedCheck = 0;
-
-  //Forhindringer
+  //Forhindringer //<>//
   FG.antalForhindringer = 0;
+  
+  //Bold //<>//
+  bold.xPos = bold.startXPos; //<>//
+  bold.yPos = bold.startYPos; //<>//
+  bold.voidSpeedCheck = 0; //<>//
 }
 
 void reset() {
   //Bold Reset
   bold= new Bold(width/2, height/2, 30);
-  bold.voidSpeedCheck = 0;
 
   //Paddel Reset
   paddel = new Padlerne(200, 500, 30, 200);
-  paddel.spillerRamtSvarCheck = 0;
+
+  //Level Reset
+  levelReset();
 
   scene = 1;
 }
