@@ -22,6 +22,13 @@ class Level {
     tegnBaser();
     vaegge();
 
+    //Forhindrings Generator
+    if (FG.antalForhindringer == 0) {
+      FG.lavAntal(int (random(1, 3)));
+    }
+    FG.display();
+    FG.collideDetection();
+
     //Bold
     bold.display();
     bold.move();
@@ -30,12 +37,6 @@ class Level {
       bold.speed(5);
       bold.voidSpeedCheck = 1;
     }
-    //Forhindrings Generator
-    if (FG.antalForhindringer == 0) {
-      FG.lavAntal(int (random(1, 3)));
-    }
-    FG.display();
-    FG.collideDetection();
 
     if (bold.xPos <= 150) {
       scene = 5;
@@ -70,6 +71,13 @@ class Level {
     tegnBaser();
     vaegge();
 
+    //Forhindrings Generator
+    if (FG.antalForhindringer == 0) {
+      FG.lavAntal(int (random(1, 3)));
+    }
+    FG.display();
+    FG.collideDetection();
+
     //Bold
     bold.display();
     bold.move();
@@ -78,13 +86,6 @@ class Level {
       bold.speed(5);
       bold.voidSpeedCheck = 1;
     }
-
-    //Forhindrings Generator
-    if (FG.antalForhindringer == 0) {
-      FG.lavAntal(int (random(3, 5)));
-    }
-    FG.display();
-    FG.collideDetection();
 
     if (bold.xPos <= 150) {
       scene = 5;
@@ -118,6 +119,13 @@ class Level {
     tegnBaser();
     vaegge();
 
+    //Forhindrings Generator
+    if (FG.antalForhindringer == 0) {
+      FG.lavAntal(int (random(1, 3)));
+    }
+    FG.display();
+    FG.collideDetection();
+
     //Bold
     bold.display();
     bold.move();
@@ -126,13 +134,6 @@ class Level {
       bold.speed(5);
       bold.voidSpeedCheck = 1;
     }
-
-    //Forhindrings Generator
-    if (FG.antalForhindringer == 0) {
-      FG.lavAntal(int (random(5, 7)));
-    }
-    FG.display();
-    FG.collideDetection();
 
     if (bold.xPos <= 150) {
       scene = 5;
