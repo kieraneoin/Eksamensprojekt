@@ -88,9 +88,11 @@ class Padlerne {
     // COLLIDE MED SOLDAT
     if (bold.hojre() > soldat.venstre()+70) {
       bold.xSpeed = -bold.xSpeed;
-
-      if (spillerRamt >= spillerRamtSvar) {
+      
+      if (spillerRamt >= spillerRamtSvar && nextLevel == 2 || nextLevel == 3) {
         scene = 6;
+      } else if (spillerRamt >= spillerRamtSvar && nextLevel == 7){
+       scene = 7;
       }
     }
   }

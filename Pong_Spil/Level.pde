@@ -63,7 +63,7 @@ class Level {
     soldat.tegnSoldat(); //<>//
 
     if (paddel.spillerRamtSvarCheck == 0) { //<>//
-      paddel.spillerRamtSvar = int (random(10, 16)); //<>//
+      paddel.spillerRamtSvar = int (random(1)); //10, 16 //<>//
       paddel.spillerRamtSvarCheck = 1; //<>//
     } //<>//
 
@@ -100,7 +100,7 @@ class Level {
 
   void level3() {
     image(pic.background, 0, 0);
-    nextLevel = 0;
+    nextLevel = 7;
     m.pause();
 
     //Paddel
@@ -111,7 +111,7 @@ class Level {
     soldat.tegnSoldat();
 
     if (paddel.spillerRamtSvarCheck == 0) {
-      paddel.spillerRamtSvar = int (random(15, 21));
+      paddel.spillerRamtSvar = int (random(1)); //15, 21
       paddel.spillerRamtSvarCheck = 1;
     }
 

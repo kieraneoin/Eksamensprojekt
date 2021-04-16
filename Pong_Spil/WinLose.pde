@@ -86,4 +86,8 @@ class WinLose {
       exit();
     }
   }
+  
+  void end(){
+    println("End vises");
+  }
 }

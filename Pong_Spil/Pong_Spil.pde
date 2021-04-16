@@ -1,4 +1,4 @@
-//Objekter //<>// //<>// //<>// //<>// //<>// //<>// //<>//
+//Objekter //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
 Padlerne paddel;
 Padlerne soldat;
 Bold bold;
@@ -73,6 +73,10 @@ void draw() {
     WL.win();
   }
 
+  if (scene == 7) {
+    WL.end();
+  }
+
   //Debug
   Debug.Debug();
 }
@@ -118,19 +122,19 @@ void tegnBaser() {
   image(pic.barak, 1420, 350, 300, 300);
 }
 
-void levelReset() { //<>//
-  //Paddel //<>//
-  paddel.spillerRamt = 0; //<>//
-  soldat.soldatRyk = 0; //<>//
-  paddel.spillerRamtSvarCheck = 0; //<>//
+void levelReset() {
+  //Paddel
+  paddel.spillerRamt = 0;
+  soldat.soldatRyk = 0;
+  paddel.spillerRamtSvarCheck = 0;
 
-  //Forhindringer //<>//
+  //Forhindringer
   FG.antalForhindringer = 0;
-  
-  //Bold //<>//
-  bold.xPos = bold.startXPos; //<>//
-  bold.yPos = bold.startYPos; //<>//
-  bold.voidSpeedCheck = 0; //<>//
+
+  //Bold
+  bold.xPos = bold.startXPos;
+  bold.yPos = bold.startYPos;
+  bold.voidSpeedCheck = 0;
 }
 
 void reset() {
