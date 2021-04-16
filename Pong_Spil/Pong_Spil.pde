@@ -53,11 +53,11 @@ void draw() {
   }
   
   if (scene == 2) {
-    Lvl.level1();
+    Lvl.level2();
   }
   
   if (scene == 3) {
-    Lvl.level1();
+    Lvl.level3();
   }
 
   if (scene == 4) {

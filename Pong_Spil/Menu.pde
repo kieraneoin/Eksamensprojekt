@@ -21,21 +21,22 @@ class Menu {
   }
 
   void klik() {
+    //Start spil
     if (mousePressed) {
       if (mouseX >=675 && mouseX <= 925 && mouseY >= 350 && mouseY <= 450) {
         scene = 1;
         println("1");
       }
-
+      //Regler
       if (mouseX >=675 && mouseX <= 925 && mouseY >= 500 && mouseY <= 600) {
-        scene = 2;
+        scene = 4;
         println("2");
       }
-
+      //Quit
       if (mouseX >=675 && mouseX <= 925 && mouseY >= 650 && mouseY <= 750) {
         exit();
       }
-
+      //Home/pause
       if (mouseX >= 20 && mouseX <= 50 && mouseY >= 20 && mouseY <= 50) {
         home();
       }
@@ -45,11 +46,11 @@ class Menu {
     image(pic.background, 0, 0);
     textAlign(CENTER);
     textSize(64);
-    text("Velkommen til ?\n",800,150);
+    text("Velkommen til ?\n", 800, 150);
     textSize(32);
     text("Reglerne er rimelig simple.\n Spillet går ud på at ramme bolden med din paddel og \n slå den tilbage mod din modstander. \n Dette bliver ved indtil du, eller computeren misser, \n hvor du så enten går videre til næste level eller taber. \n\n\n\n Styring:\n Ryk op: Pil op\n Ryk ned: Pil ned ", 800, 250);
-    textAlign(LEFT);  
-}
+    textAlign(LEFT);
+  }
 
   void home() {
     scene = 0;
