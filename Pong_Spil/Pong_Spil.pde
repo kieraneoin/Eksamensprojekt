@@ -1,4 +1,4 @@
-//Objekter //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
+//Objekter //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
 Padlerne paddel;
 Padlerne soldat;
 Bold bold;
@@ -18,7 +18,7 @@ int H2 = 0;
 int startTime = 0;
 int time = 0;
 
-int scene = 0;
+int scene = 2;
 
 int nextLevel;
 
@@ -105,6 +105,8 @@ void mouseClicked() {
     WL.loseKnap();
   } else if (scene == 6) {
     WL.winKnap();
+  } else if (scene == 7){
+  WL.endKnap();
   }
 }
 
@@ -116,19 +118,19 @@ void vaegge() {
     paddel.y = H - 10;
   }
 }
+ //<>//
+void tegnBaser() { //<>//
+  image(pic.moske, -120, 300, 300, 300); //<>//
+  image(pic.barak, 1420, 350, 300, 300); //<>//
+} //<>//
 
-void tegnBaser() {
-  image(pic.moske, -120, 300, 300, 300);
-  image(pic.barak, 1420, 350, 300, 300);
-}
-
-void levelReset() {
+void levelReset() { //<>//
   //Paddel
   paddel.spillerRamt = 0;
-  soldat.soldatRyk = 0;
-  paddel.spillerRamtSvarCheck = 0;
-
-  //Forhindringer
+  soldat.soldatRyk = 0; //<>//
+  paddel.spillerRamtSvarCheck = 0; //<>//
+ //<>//
+  //Forhindringer //<>//
   FG.antalForhindringer = 0;
 
   //Bold
