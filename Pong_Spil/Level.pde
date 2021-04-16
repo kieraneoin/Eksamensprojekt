@@ -30,9 +30,6 @@ class Level {
       bold.speed(5);
       bold.voidSpeedCheck = 1;
     }
-    //Timer
-    timer();
-
     //Forhindrings Generator
     if (FG.antalForhindringer == 0) {
       FG.lavAntal(int (random(1, 3)));
@@ -81,8 +78,6 @@ class Level {
       bold.speed(5);
       bold.voidSpeedCheck = 1;
     }
-    //Timer
-    timer();
 
     //Forhindrings Generator
     if (FG.antalForhindringer == 0) {
@@ -131,8 +126,6 @@ class Level {
       bold.speed(5);
       bold.voidSpeedCheck = 1;
     }
-    //Timer
-    timer();
 
     //Forhindrings Generator
     if (FG.antalForhindringer == 0) {

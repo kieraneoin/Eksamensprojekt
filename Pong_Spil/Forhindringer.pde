@@ -7,7 +7,7 @@ class Forhindring {
 
   void display() {
     // Jetpack
-    if (yPos <= 550+hoejde) {
+    if (yPos <= 500) {
       //Venstre side
       image(pic.jetpack, xPos-50, yPos+30, 50, 50);
       image(pic.explosion, xPos-62, yPos+70, 40, 40);

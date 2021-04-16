@@ -118,15 +118,6 @@ void tegnBaser() {
   image(pic.barak, 1420, 350, 300, 300);
 }
 
-void timer() {
-  time = millis()/1000 - startTime;
-  textSize(32);
-  text(time, 1500, 100);
-  if (WL.lose==true) {
-    time = 0;
-  }
-}
-
 void levelReset() {
   //Paddel
   paddel.spillerRamt = 0;
@@ -151,6 +142,5 @@ void reset() {
   paddel = new Padlerne(200, 500, 30, 200);
   paddel.spillerRamtSvarCheck = 0;
 
-  timer();
   scene = 1;
 }
