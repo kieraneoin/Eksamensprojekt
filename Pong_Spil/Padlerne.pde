@@ -90,7 +90,7 @@ class Padlerne {
       bold.xSpeed = -bold.xSpeed;
 
       if (spillerRamt >= spillerRamtSvar) {
-        WL.win();
+        scene = 6;
       }
     }
   }

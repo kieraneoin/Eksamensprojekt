@@ -3,6 +3,7 @@ class Level {
   //////////////////////////////////////////Level 1 
   void level1() {
     image(pic.background, 0, 0);
+    nextLevel = 2;
     m.pause();
 
     //Paddel
@@ -53,6 +54,7 @@ class Level {
   //////////////////////////////////////////Level 2   
   void level2() {
     image(pic.background, 0, 0);
+    nextLevel = 3;
     m.pause();
 
     //Paddel
@@ -102,6 +104,7 @@ class Level {
 
   void level3() {
     image(pic.background, 0, 0);
+    nextLevel = 0;
     m.pause();
 
     //Paddel

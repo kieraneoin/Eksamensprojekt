@@ -11,7 +11,7 @@ class WinLose {
     textSize(64);
     fill(random(0, 255), random(0, 255), random(0, 255));
     textAlign(CENTER);
-    text("YOU WIN", 800, 2);
+    text("YOU WIN", 800, 200);
     textAlign(LEFT);
     fill(255);
     textSize(32);
@@ -29,7 +29,7 @@ class WinLose {
     fill(0);
 
     //Text
-    text("Try Again", 730, 411);
+    text("Next Level", 730, 411);
     text("Main Menu", 725, 561);
     text("Exit", 765, 711);
     fill(255);
@@ -38,7 +38,8 @@ class WinLose {
   void winKnap() {
     //Next level
     if (mouseX >=675 && mouseX <= 925 && mouseY >= 350 && mouseY <= 450) {
-      scene = scene + 1;
+      scene = nextLevel;
+      paddel.spillerRamt = 0;
     }
     // Main menu
     if (mouseX >=675 && mouseX <= 925 && mouseY >= 500 && mouseY <= 600) {

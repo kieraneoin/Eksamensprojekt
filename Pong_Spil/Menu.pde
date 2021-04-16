@@ -24,6 +24,7 @@ class Menu {
     //Start spil
     if (mouseX >=675 && mouseX <= 925 && mouseY >= 350 && mouseY <= 450) {
       scene = 1;
+      nextLevel = 1;
     }
     //Regler
     if (mouseX >=675 && mouseX <= 925 && mouseY >= 500 && mouseY <= 600) {
@@ -50,6 +51,12 @@ class Menu {
     textSize(32);
     text("Reglerne er rimelig simple.\n Spillet går ud på at ramme bolden med din paddel og \n slå den tilbage mod din modstander. \n Dette bliver ved indtil du, eller computeren misser, \n hvor du så enten går videre til næste level eller taber. \n\n\n\n Styring:\n Ryk op: Pil op\n Ryk ned: Pil ned ", 800, 250);
     textAlign(LEFT);
+
+    //Tilbage knap
+    rect(20, 20, 30, 30);
+    fill(0);
+    text("<", 20, 44);
+    fill(255);
   }
 
   void home() {

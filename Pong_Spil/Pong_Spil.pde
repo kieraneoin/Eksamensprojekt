@@ -20,6 +20,8 @@ int time = 0;
 
 int scene = 0;
 
+int nextLevel;
+
 void setup() {
   //Setup nødvendigheder
   size(1600, 900);
@@ -61,14 +63,14 @@ void draw() {
 
   if (scene == 4) {
     m.rules();
-    rect(20, 20, 30, 30);
-    fill(0);
-    text("<", 20, 44);
-    fill(255);
   }
 
   if (scene == 5) {
     WL.lose();
+  }
+
+  if (scene == 6) {
+    WL.win();
   }
 
   //Debug
@@ -97,6 +99,8 @@ void mouseClicked() {
     m.tilbageKnap();
   } else if (scene == 5) {
     WL.loseKnap();
+  } else if (scene == 6) {
+    WL.winKnap();
   }
 }
 
