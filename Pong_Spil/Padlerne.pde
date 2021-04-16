@@ -89,7 +89,7 @@ class Padlerne {
     if (bold.hojre() > soldat.venstre()+70) {
       bold.xSpeed = -bold.xSpeed;
       
-      if (spillerRamt >= spillerRamtSvar && nextLevel == 2 || nextLevel == 3) {
+      if (spillerRamt >= spillerRamtSvar && nextLevel == 2 || spillerRamt >= spillerRamtSvar && nextLevel == 3) {
         scene = 6;
       } else if (spillerRamt >= spillerRamtSvar && nextLevel == 7){
        scene = 7;

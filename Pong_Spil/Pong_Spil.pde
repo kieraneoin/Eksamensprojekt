@@ -1,4 +1,4 @@
-//Objekter //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
+//Objekter //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
 Padlerne paddel;
 Padlerne soldat;
 Bold bold;
@@ -18,7 +18,7 @@ int H2 = 0;
 int startTime = 0;
 int time = 0;
 
-int scene = 2;
+int scene = 0;
 
 int nextLevel;
 
@@ -44,7 +44,7 @@ void setup() {
 
 void draw() {
   clear();
-  println(FG.antalForhindringer);
+  println(paddel.spillerRamtSvar);
   if (scene==0) {
     m.display();
   }
