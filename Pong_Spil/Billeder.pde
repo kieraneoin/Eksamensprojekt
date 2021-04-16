@@ -14,6 +14,9 @@ class Billeder {
   PImage explosionSoldat;
   PImage bomb;
 
+  //Sandsæk
+  PImage jetpackss;
+
   //Load Billeder
   void loadBilleder() {
     bandit = loadImage("terrorist.png");
@@ -26,5 +29,6 @@ class Billeder {
     moske = loadImage("moské.png");
     barak = loadImage("barak.png");
     bomb = loadImage("bomb.png");
+    jetpackss = loadImage ("jetpackss.png");
   }
 }

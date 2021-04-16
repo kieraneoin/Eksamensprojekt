@@ -6,6 +6,17 @@ class Forhindring {
   int hoejde = 150;
 
   void display() {
+    // Jetpack
+    if (yPos <= 550+hoejde) {
+      //Venstre side
+      image(pic.jetpack, xPos-50, yPos+30, 50, 50);
+      image(pic.explosion, xPos-62, yPos+70, 40, 40);
+      
+      //Højre side
+      image(pic.jetpackss, xPos-11, yPos+31, 50, 50);
+      image(pic.explosionSoldat, xPos+9, yPos+72, 40, 40);
+    }
+    
     fill(240, 200, 175);
     //Højre
     //Bunden af sandbag vækken
