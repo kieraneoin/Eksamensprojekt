@@ -52,7 +52,7 @@ class Menu {
     textSize(64);
     text("Velkommen til Desert Warfare\n", 800, 150);
     textSize(32);
-    text("Reglerne er rimelig simple.\n Spillet går ud på at ramme bolden med din paddel og \n slå den tilbage mod din modstander. \n Dette bliver ved indtil du, eller computeren misser, \n hvor du så enten går videre til næste level eller taber. \n\n\n\n Styring:\n Ryk op: Pil op\n Ryk ned: Pil ned ", 800, 250);
+    text("Reglerne er rimelig simple.\n Spillet går ud på at ramme bomben med din paddel og \n slå den tilbage mod din modstander. \n Dette bliver ved indtil du, eller computeren misser, \n hvor du så enten går videre til næste level eller taber. \n\n\n\n Styring:\n Ryk op: Pil op\n Ryk ned: Pil ned ", 800, 250);
     textAlign(LEFT);
 
     //Tilbage knap
