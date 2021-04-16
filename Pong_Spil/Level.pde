@@ -37,6 +37,8 @@ class Level {
       bold.speed(5);
       bold.voidSpeedCheck = 1;
     }
+    textSize(32);
+    text("Level: 1", 75, 50);
 
     if (bold.xPos <= 150) {
       scene = 5;
@@ -48,49 +50,52 @@ class Level {
       m.home();
     }
   }
-
-  //Level 2   
+ //<>//
+  //Level 2    //<>//
   void level2() { //<>//
     image(pic.background, 0, 0); //<>//
-    nextLevel = 3; //<>//
+    nextLevel = 3;
     m.pause(); //<>//
-
+ //<>//
     //Paddel //<>//
     paddel.moveBandit(); //<>//
     paddel.tegnBandit(); //<>//
     paddel.miss(); //<>//
-    paddel.collide(); //<>//
+    paddel.collide();
     soldat.tegnSoldat(); //<>//
-
+ //<>//
     if (paddel.spillerRamtSvarCheck == 0) { //<>//
       paddel.spillerRamtSvar = int (random(10, 16)); //<>//
-      paddel.spillerRamtSvarCheck = 1; //<>//
+      paddel.spillerRamtSvarCheck = 1;
     } //<>//
-
+ //<>//
     //Baggrund //<>//
-    tegnBaser(); //<>//
+    tegnBaser();
     vaegge(); //<>//
-
+ //<>//
     //Forhindrings Generator //<>//
-    if (FG.antalForhindringer == 0) { //<>//
+    if (FG.antalForhindringer == 0) {
       FG.lavAntal(int (random(3, 5))); //<>//
-    }
-    FG.display(); //<>//
+    } //<>//
+    FG.display();
     FG.collideDetection(); //<>//
-
+ //<>//
     //Bold //<>//
     bold.display(); //<>//
     bold.move();  //<>//
     bold.udForSkaerm(); //<>//
     if (bold.voidSpeedCheck == 0) { //<>//
       bold.speed(5); //<>//
-      bold.voidSpeedCheck = 1; //<>//
+      bold.voidSpeedCheck = 1;
     } //<>//
+ //<>//
+    textSize(32); //<>//
+    text("Level: 2", 75, 50); //<>//
 
-    if (bold.xPos <= 150) { //<>//
-      scene = 5; //<>//
-    } //<>//
-  } //<>//
+    if (bold.xPos <= 150) {
+      scene = 5;
+    }
+  }
 
   void level2Knap() {
     if (mouseX >= 20 && mouseX <= 50 && mouseY >= 20 && mouseY <= 50) {
@@ -111,7 +116,7 @@ class Level {
     soldat.tegnSoldat();
 
     if (paddel.spillerRamtSvarCheck == 0) {
-      paddel.spillerRamtSvar = int (random(15,21)); 
+      paddel.spillerRamtSvar = int (random(15, 21)); 
       paddel.spillerRamtSvarCheck = 1;
     }
 
@@ -134,6 +139,9 @@ class Level {
       bold.speed(5);
       bold.voidSpeedCheck = 1;
     }
+
+    textSize(32);
+    text("Level: 3", 75, 50);
 
     if (bold.xPos <= 150) {
       scene = 5;
