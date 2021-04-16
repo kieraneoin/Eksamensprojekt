@@ -16,7 +16,10 @@ class Menu {
     text("Start", 765, 411);
     text("Rules", 765, 561);
     text("Exit", 765, 711);
-
+    textSize(64);
+    fill(240,240,196);
+    text("Desert Warfare", 575, 200);
+    textSize(32);  
     fill(255);
   }
 
@@ -47,7 +50,7 @@ class Menu {
     image(pic.background, 0, 0);
     textAlign(CENTER);
     textSize(64);
-    text("Velkommen til ?\n", 800, 150);
+    text("Velkommen til Desert Warfare\n", 800, 150);
     textSize(32);
     text("Reglerne er rimelig simple.\n Spillet går ud på at ramme bolden med din paddel og \n slå den tilbage mod din modstander. \n Dette bliver ved indtil du, eller computeren misser, \n hvor du så enten går videre til næste level eller taber. \n\n\n\n Styring:\n Ryk op: Pil op\n Ryk ned: Pil ned ", 800, 250);
     textAlign(LEFT);
