@@ -1,4 +1,4 @@
-//Objekter //<>//
+//Objekter //<>// //<>// //<>//
 Padlerne paddel;
 Padlerne soldat;
 Bold bold;
@@ -25,7 +25,7 @@ void setup() {
   size(1600, 900);
   frameRate(60);
 
-  //
+  //Objekter
   paddel = new Padlerne(200, 500, 30, 200);
   soldat = new Padlerne(1330, 500, 30, 200);
   FG = new ForhindringerGenerator();
@@ -42,8 +42,7 @@ void setup() {
 
 void draw() {
   clear();
-  println(bold.xSpeed);
-  println(bold.ySpeed);
+  
   if (scene==0) {
     m.display();
     m.klik();
@@ -111,4 +110,16 @@ void timer() {
   if (WL.lose==true) {
     time = 0;
   }
+}
+
+void reset() {
+  //Bold Reset
+  bold= new Bold(width/2, height/2, 30);
+  bold.voidSpeedCheck = 0;
+
+  //Paddel Reset
+  paddel = new Padlerne(200, 500, 30, 200);
+
+  timer();
+  scene = 1;
 }

@@ -23,7 +23,7 @@ class Bold {
     yPos = yPos + ySpeed;
   }
 
-  void speed(float speed){
+  void speed(float speed) {
     xSpeed = speed;
     ySpeed = random(-xSpeed/1.5, xSpeed/1.5);
   }

@@ -42,7 +42,7 @@ class WinLose {
     fill(255);
     if (mousePressed) {
       if (mouseX >= 20 && mouseX <= 50 && mouseY >= 20 && mouseY <= 50) {
-        m.home();
+        reset();
       }
     }
   }

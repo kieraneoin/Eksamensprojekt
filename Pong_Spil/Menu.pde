@@ -10,7 +10,6 @@ class Menu {
     rect(675, 500, 250, 100);
     rect(675, 650, 250, 100);
 
-
     //text
     textSize(32);
     fill(0);
@@ -44,8 +43,13 @@ class Menu {
   }
   void rules() {
     image(pic.background, 0, 0);
-    text("Abdullah", 200, 200);
-  }
+    textAlign(CENTER);
+    textSize(64);
+    text("Velkommen til ?\n",800,150);
+    textSize(32);
+    text("Reglerne er rimelig simple.\n Spillet går ud på at ramme bolden med din paddel og \n slå den tilbage mod din modstander. \n Dette bliver ved indtil du, eller computeren misser, \n hvor du så enten går videre til næste level eller taber. \n\n\n\n Styring:\n Ryk op: Pil op\n Ryk ned: Pil ned ", 800, 250);
+    textAlign(LEFT);  
+}
 
   void home() {
     scene = 0;

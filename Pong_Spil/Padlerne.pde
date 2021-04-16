@@ -83,10 +83,11 @@ class Padlerne {
       bold.ySpeed = random(-bold.ySpeed*1.5, bold.ySpeed*1.5);
       spillerRamt++;
     }
+    
     // COLLIDE MED SOLDAT
     if (bold.hojre() > soldat.venstre()+70) {
       bold.xSpeed = -bold.xSpeed;
-   
+
       if (spillerRamt >= spillerRamtSvar) {
         WL.win();
         println("hej");
