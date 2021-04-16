@@ -86,7 +86,7 @@ class Level {
     FG.collideDetection();
 
     if (bold.xPos <= 150) {
-      scene = 5;
+      
     }
   }
   
