@@ -25,12 +25,10 @@ class Menu {
     if (mousePressed) {
       if (mouseX >=675 && mouseX <= 925 && mouseY >= 350 && mouseY <= 450) {
         scene = 1;
-        println("1");
       }
       //Regler
       if (mouseX >=675 && mouseX <= 925 && mouseY >= 500 && mouseY <= 600) {
         scene = 4;
-        println("2");
       }
       //Quit
       if (mouseX >=675 && mouseX <= 925 && mouseY >= 650 && mouseY <= 750) {
