@@ -16,7 +16,11 @@ class Level {
     paddel.miss();
     paddel.collide();
     soldat.tegnSoldat();
-    paddel.spillerRamtSvar = int (random(5, 11));
+
+    if (paddel.spillerRamtSvarCheck == 0) {
+      paddel.spillerRamtSvar = int (random(5, 11));
+      paddel.spillerRamtSvarCheck = 1;
+    }
 
     //Baggrund
     tegnBaser();
@@ -61,7 +65,11 @@ class Level {
     paddel.miss();
     paddel.collide();
     soldat.tegnSoldat();
-    paddel.spillerRamt = (int (random(10, 16)));
+
+    if (paddel.spillerRamtSvarCheck == 0) {
+      paddel.spillerRamtSvar = int (random(10, 16));
+      paddel.spillerRamtSvarCheck = 1;
+    }
 
     //Baggrund
     tegnBaser();
@@ -89,8 +97,8 @@ class Level {
       scene = 5;
     }
   }
-  
-    void level3() {
+
+  void level3() {
     image(pic.background, 0, 0);
     m.pause();
     if (mousePressed) {
@@ -105,7 +113,11 @@ class Level {
     paddel.miss();
     paddel.collide();
     soldat.tegnSoldat();
-    paddel.spillerRamt = (int (random(10, 16)));
+
+    if (paddel.spillerRamtSvarCheck == 0) {
+      paddel.spillerRamtSvar = int (random(15, 21));
+      paddel.spillerRamtSvarCheck = 1;
+    }
 
     //Baggrund
     tegnBaser();
@@ -124,7 +136,7 @@ class Level {
 
     //Forhindrings Generator
     if (FG.antalForhindringer == 0) {
-      FG.lavAntal(int (random(3, 5)));
+      FG.lavAntal(int (random(5, 7)));
     }
     FG.display();
     FG.collideDetection();

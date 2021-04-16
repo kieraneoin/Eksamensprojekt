@@ -13,6 +13,7 @@ class Padlerne {
   float soldatRyk;
   int spillerRamt;
   int spillerRamtSvar;
+  int spillerRamtSvarCheck;
 
   //booleans
   boolean moveUp = false;
@@ -90,8 +91,6 @@ class Padlerne {
 
       if (spillerRamt >= spillerRamtSvar) {
         WL.win();
-        println("hej");
-        println(spillerRamt);
       }
     }
   }

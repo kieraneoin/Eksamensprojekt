@@ -42,7 +42,9 @@ void setup() {
 
 void draw() {
   clear();
-  
+  println(paddel.spillerRamtSvar);
+  println(paddel.spillerRamt);
+
   if (scene==0) {
     m.display();
     m.klik();
@@ -51,11 +53,11 @@ void draw() {
   if (scene == 1) {
     Lvl.level1();
   }
-  
+
   if (scene == 2) {
     Lvl.level2();
   }
-  
+
   if (scene == 3) {
     Lvl.level3();
   }
@@ -119,6 +121,7 @@ void reset() {
 
   //Paddel Reset
   paddel = new Padlerne(200, 500, 30, 200);
+  paddel.spillerRamtSvarCheck = 0;
 
   timer();
   scene = 1;
