@@ -1,4 +1,4 @@
-//Objekter //<>// //<>// //<>//
+//Objekter //<>// //<>// //<>// //<>// //<>//
 Padlerne paddel;
 Padlerne soldat;
 Bold bold;
@@ -42,9 +42,7 @@ void setup() {
 
 void draw() {
   clear();
-  println(paddel.spillerRamtSvar);
-  println(paddel.spillerRamt);
-
+  
   if (scene==0) {
     m.display();
     m.klik();
