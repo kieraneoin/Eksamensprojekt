@@ -110,7 +110,6 @@ class Padlerne {
 
   void miss() {
     if (spillerRamt == spillerRamtSvar ) {
-      // bold.xSpeed=+1000;
       soldat.soldatRyk = soldat.soldatRyk+0.5;
     } 
     if (soldat.soldatRyk >= bold.diameter*2.5 && spillerRamt == 1) {

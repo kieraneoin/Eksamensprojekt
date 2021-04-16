@@ -16,11 +16,6 @@ class WinLose {
     fill(255);
     textSize(32);
 
-    bold.xPos =+ 10000;
-    bold.yPos =+ 10000;
-    paddel.x =+ 10000;
-    paddel.y =+ 10000;
-
     fill(255);
     //Knapper
     rect(675, 350, 250, 100);
@@ -39,7 +34,7 @@ class WinLose {
     //Next level
     if (mouseX >=675 && mouseX <= 925 && mouseY >= 350 && mouseY <= 450) {
       scene = nextLevel;
-      paddel.spillerRamt = 0;
+      levelReset();
     }
     // Main menu
     if (mouseX >=675 && mouseX <= 925 && mouseY >= 500 && mouseY <= 600) {
@@ -55,11 +50,6 @@ class WinLose {
     image(pic.background, 0, 0);
     win = false;
     lose = true;
-
-    bold.xPos =- 10000;
-    bold.yPos =+ 10000;
-    paddel.x =+ 10000;
-    paddel.y =+ 10000;
 
     textSize(64);
     fill(random(0, 255), random(0, 255), random(0, 255));

@@ -44,7 +44,7 @@ void setup() {
 
 void draw() {
   clear();
-  println(scene);
+  println(paddel.spillerRamt);
   if (scene==0) {
     m.display();
   }
@@ -125,6 +125,21 @@ void timer() {
   if (WL.lose==true) {
     time = 0;
   }
+}
+
+void levelReset() {
+  //Paddel
+  paddel.spillerRamt = 0;
+  soldat.soldatRyk = 0;
+  paddel.spillerRamtSvarCheck = 0;
+
+  //Bold
+  bold.xPos = bold.startXPos;
+  bold.yPos = bold.startYPos;
+  bold.voidSpeedCheck = 0;
+
+  //Forhindringer
+  FG.antalForhindringer = 0;
 }
 
 void reset() {

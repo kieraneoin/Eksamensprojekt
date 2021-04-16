@@ -6,11 +6,15 @@ class Bold {
   float ySpeed;
   float diameter;
   float voidSpeedCheck;
+  float startXPos;
+  float startYPos;
 
   Bold(float xP, float yP, float d) {
     xPos = xP;
     yPos = yP;
     diameter = d;
+    startXPos = xP;
+    startYPos = yP;
   }
 
   void display() {
