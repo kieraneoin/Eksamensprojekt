@@ -31,19 +31,20 @@ class WinLose {
     text("Main Menu", 725, 561);
     text("Exit", 765, 711);
     fill(255);
-    if (mousePressed) {
-      //Next level
-      if (mouseX >=675 && mouseX <= 925 && mouseY >= 350 && mouseY <= 450) {
-        scene = scene + 1;
-      }
-      // Main menu
-      if (mouseX >=675 && mouseX <= 925 && mouseY >= 500 && mouseY <= 600) {
-        m.home();
-      }
-      //Quit
-      if (mouseX >=675 && mouseX <= 925 && mouseY >= 650 && mouseY <= 750) {
-        exit();
-      }
+  }
+
+  void winKnap() {
+    //Next level
+    if (mouseX >=675 && mouseX <= 925 && mouseY >= 350 && mouseY <= 450) {
+      scene = scene + 1;
+    }
+    // Main menu
+    if (mouseX >=675 && mouseX <= 925 && mouseY >= 500 && mouseY <= 600) {
+      m.home();
+    }
+    //Quit
+    if (mouseX >=675 && mouseX <= 925 && mouseY >= 650 && mouseY <= 750) {
+      exit();
     }
   }
 
@@ -92,7 +93,7 @@ class WinLose {
     if (mouseX >=675 && mouseX <= 925 && mouseY >= 500 && mouseY <= 600) {
       m.home();
     }
-    
+
     if (mouseX >=675 && mouseX <= 925 && mouseY >= 650 && mouseY <= 750) {
       exit();
     }
