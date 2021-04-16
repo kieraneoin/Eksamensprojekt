@@ -5,6 +5,7 @@ Bold bold;
 WinLose WL;
 ForhindringerGenerator FG;
 Menu m;
+Level Lvl;
 
 //Features
 Debug Debug = new Debug();
@@ -30,6 +31,7 @@ void setup() {
   FG = new ForhindringerGenerator();
   bold= new Bold(width/2, height/2, 30);
   m = new Menu();
+  Lvl = new Level();
 
   //Win - Loss screen
   WL = new WinLose();
@@ -40,57 +42,26 @@ void setup() {
 
 void draw() {
   clear();
+  println(bold.xSpeed);
+  println(bold.ySpeed);
   if (scene==0) {
     m.display();
     m.klik();
   }
 
-
-
   if (scene == 1) {
-    image(pic.background, 0, 0);
-    m.pause();
-    if (mousePressed) {
-      if (mouseX >= 20 && mouseX <= 50 && mouseY >= 20 && mouseY <= 50) {
-        m.home();
-      }
-    }
-
-    //Paddel
-    paddel.moveBandit();
-    paddel.tegnBandit();
-    paddel.miss();
-    paddel.collide();
-    soldat.tegnSoldat();
-
-    //Baggrund
-    tegnBaser();
-    vaegge();
-
-    //Bold
-    bold.display();
-    bold.move();
-    bold.udForSkaerm();
-    if (bold.voidSpeedCheck == 0) {
-      bold.speed(5);
-      bold.voidSpeedCheck = 1;
-    }
-    //Timer
-    timer();
-
-    //Forhindrings Generator
-    if (FG.antalForhindringer == 0) {
-      FG.lavAntal(3);
-    }
-    FG.display();
-    FG.collideDetection();
-
-    if (bold.xPos <= 150) {
-      scene = 3;
-    }
+    Lvl.level1();
+  }
+  
+  if (scene == 2) {
+    Lvl.level1();
+  }
+  
+  if (scene == 3) {
+    Lvl.level1();
   }
 
-  if (scene == 2) {
+  if (scene == 4) {
     m.rules();
     rect(20, 20, 30, 30);
     fill(0);
@@ -103,7 +74,7 @@ void draw() {
     }
   }
 
-  if (scene == 3) {
+  if (scene == 5) {
     WL.lose();
   }
 

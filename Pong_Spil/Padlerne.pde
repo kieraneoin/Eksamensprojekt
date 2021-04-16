@@ -12,7 +12,7 @@ class Padlerne {
   float soldatY;
   float soldatRyk;
   int spillerRamt;
-  int spillerRamtSvar = 5;
+  int spillerRamtSvar;
 
   //booleans
   boolean moveUp = false;
@@ -80,7 +80,7 @@ class Padlerne {
     // COllIDE MED BANDIT
     if (bold.venstre() < paddel.hojre() && bold.yPos > paddel.op()+90 && bold.yPos < paddel.ned()+20) {
       bold.xSpeed = -bold.xSpeed;
-      bold.ySpeed = random(-bold.ySpeed*2, bold.ySpeed*2);
+      bold.ySpeed = random(-bold.ySpeed*1.5, bold.ySpeed*1.5);
       spillerRamt++;
     }
     // COLLIDE MED SOLDAT
