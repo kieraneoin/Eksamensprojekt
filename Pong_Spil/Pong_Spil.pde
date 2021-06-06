@@ -1,13 +1,5 @@
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-//Objekterne deklareres //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
+//Objekterne deklareres //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
 Padlerne paddel; 
-=======
->>>>>>> Stashed changes
-//Objekter //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
-Padlerne paddel;
->>>>>>> c02a63fc37e18c7ab9b69532ca2ff5f26f8de009
 Padlerne soldat;
 Bold bold;
 WinLose WL;
@@ -127,9 +119,6 @@ void vaegge() {
     paddel.y = H - 10;
   }
 }
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
 //Baserne tegnes
 void tegnBaser() {
   image(pic.moske, -120, 300, 300, 300);
@@ -143,25 +132,6 @@ void levelReset() {
   paddel.spillerRamtSvarCheck = 0;
 
   //Forhindringer
-=======
->>>>>>> Stashed changes
- //<>// //<>//
-void tegnBaser() { //<>// //<>//
-  image(pic.moske, -120, 300, 300, 300); //<>// //<>//
-  image(pic.barak, 1420, 350, 300, 300); //<>// //<>//
-} //<>// //<>//
-
-void levelReset() { //<>// //<>//
-  //Paddel
-  paddel.spillerRamt = 0;
-  soldat.soldatRyk = 0; //<>// //<>//
-  paddel.spillerRamtSvarCheck = 0; //<>// //<>//
- //<>// //<>//
-  //Forhindringer //<>// //<>//
-<<<<<<< Updated upstream
-=======
->>>>>>> c02a63fc37e18c7ab9b69532ca2ff5f26f8de009
->>>>>>> Stashed changes
   FG.antalForhindringer = 0;
 
   //Bold

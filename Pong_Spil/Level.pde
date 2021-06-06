@@ -1,4 +1,4 @@
-class Level { //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
+class Level { //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
   //Level 1 
   void level1() {
     image(pic.background, 0, 0); //Baggrunden tegnes
@@ -53,9 +53,6 @@ class Level { //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<
       m.home();
     }
   }
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
   //Ovenstående gentages i de næste levels
   //Level 2   
   void level2() {
@@ -97,53 +94,7 @@ class Level { //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<
 
     textSize(32);
     text("Level: 2", 75, 50);
-=======
->>>>>>> Stashed changes
- //<>// //<>//
-  //Level 2    //<>// //<>//
-  void level2() { //<>// //<>//
-    image(pic.background, 0, 0); //<>// //<>//
-    nextLevel = 3;
-    m.pause(); //<>// //<>//
- //<>// //<>//
-    //Paddel //<>// //<>//
-    paddel.moveBandit(); //<>// //<>//
-    paddel.tegnBandit(); //<>// //<>//
-    paddel.miss(); //<>// //<>//
-    paddel.collide();
-    soldat.tegnSoldat(); //<>// //<>//
- //<>// //<>//
-    if (paddel.spillerRamtSvarCheck == 0) { //<>// //<>//
-      paddel.spillerRamtSvar = int (random(10, 16)); //<>// //<>//
-      paddel.spillerRamtSvarCheck = 1;
-    } //<>// //<>//
- //<>// //<>//
-    //Baggrund //<>// //<>//
-    tegnBaser();
-    vaegge(); //<>// //<>//
- //<>// //<>//
-    //Forhindrings Generator //<>// //<>//
-    if (FG.antalForhindringer == 0) {
-      FG.lavAntal(int (random(3, 5))); //<>// //<>//
-    } //<>// //<>//
-    FG.display();
-    FG.collideDetection(); //<>// //<>//
- //<>// //<>//
-    //Bold //<>// //<>//
-    bold.display(); //<>// //<>//
-    bold.move();  //<>// //<>//
-    bold.udForSkaerm(); //<>// //<>//
-    if (bold.voidSpeedCheck == 0) { //<>// //<>//
-      bold.speed(5); //<>// //<>//
-      bold.voidSpeedCheck = 1;
-    } //<>// //<>//
- //<>// //<>//
-    textSize(32); //<>// //<>//
-    text("Level: 2", 75, 50); //<>// //<>//
-<<<<<<< Updated upstream
-=======
->>>>>>> c02a63fc37e18c7ab9b69532ca2ff5f26f8de009
->>>>>>> Stashed changes
+
 
     if (bold.xPos <= 150) {
       scene = 5;
