@@ -55,18 +55,18 @@ class Menu {
     text("Reglerne er rimelig simple.\n Spillet går ud på at ramme bomben med din paddel og \n slå den tilbage mod din modstander. \n Dette bliver ved indtil du, eller computeren misser, \n hvor du så enten går videre til næste level eller taber. \n\n\n\n Styring:\n Ryk op: Pil op\n Ryk ned: Pil ned ", 800, 250);
     textAlign(LEFT);
 
-    //Tilbage knap
+    //Tilbage knap ligges oven i home knappen men har samme funktionalitet
     rect(20, 20, 30, 30);
     fill(0);
     text("<", 20, 44);
     fill(255);
   }
 
-  void home() {
+  void home() {// Sender brugeren tilbage til hovedmenuen
     scene = 0;
   }
 
-  void pause() {
+  void pause() {//Tegner knappen oven i home knappen
     rect(20, 20, 30, 30);
     fill(0);
     rect(28, 22, 4, 26);

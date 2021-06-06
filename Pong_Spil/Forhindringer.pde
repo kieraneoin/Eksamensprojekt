@@ -6,7 +6,7 @@ class Forhindring {
   int hoejde = 150;
 
   void display() {
-    // Jetpack
+    // Jetpack til forhindringer
     if (yPos <= 500) {
       //Venstre side
       image(pic.jetpack, xPos-50, yPos+30, 50, 50);
@@ -16,7 +16,7 @@ class Forhindring {
       image(pic.jetpackss, xPos-11, yPos+31, 50, 50);
       image(pic.explosionSoldat, xPos+9, yPos+72, 40, 40);
     }
-    
+    //Sandsækkene tegnes lodret
     fill(240, 200, 175);
     //Højre
     //Bunden af sandbag vækken

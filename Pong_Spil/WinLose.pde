@@ -1,8 +1,9 @@
-class WinLose {
+class WinLose { //<>// //<>// //<>// //<>// //<>// //<>//
   //booleans
   boolean win;
   boolean lose;
 
+  //Vinderskærmen
   void win() {
     image(pic.background, 0, 0);
     win = true;
@@ -30,14 +31,15 @@ class WinLose {
     fill(255);
   }
 
-  void winKnap() {  //<>//
-    //Next level  //<>//
-    if (mouseX >=675 && mouseX <= 925 && mouseY >= 350 && mouseY <= 450) {  //<>//
-      scene = nextLevel;  //<>//
-      levelReset();  //<>//
+  //Kanpperne der findes på vinderskærmen
+  void winKnap() { 
+    //Next level 
+    if (mouseX >=675 && mouseX <= 925 && mouseY >= 350 && mouseY <= 450) { 
+      scene = nextLevel; 
+      levelReset();
     }
     // Main menu
-    if (mouseX >=675 && mouseX <= 925 && mouseY >= 500 && mouseY <= 600) {  //<>//
+    if (mouseX >=675 && mouseX <= 925 && mouseY >= 500 && mouseY <= 600) { 
       m.home();
     }
     //Quit
@@ -46,6 +48,7 @@ class WinLose {
     }
   }
 
+  //Skærmen der kommer frem hvis man taber. Så er man dårlig
   void lose() {
     image(pic.background, 0, 0);
     win = false;
@@ -73,6 +76,7 @@ class WinLose {
     fill(255);
   }
 
+  //Selve knapperne
   void loseKnap() {
     if (mouseX >=675 && mouseX <= 925 && mouseY >= 350 && mouseY <= 450) {
       reset();
@@ -86,29 +90,30 @@ class WinLose {
       exit();
     }
   }
-  
-  void end(){
-   image(pic.background,0,0);
-   textAlign(CENTER);
-   textSize(64);
-   fill(0,255,0);
-   text("Congratulations \n You won the game",800,200);
-   textSize(32);
 
-   text("Push to play again",800,600);
-  fill(255);
-   //Tilbage til start
+  //Spillets slutning når man har vundet alle banerne og de knapper der hører med
+  void end() {
+    image(pic.background, 0, 0);
+    textAlign(CENTER);
+    textSize(64);
+    fill(0, 255, 0);
+    text("Congratulations \n You won the game", 800, 200);
+    textSize(32);
+
+    text("Push to play again", 800, 600);
+    fill(255);
+    //Tilbage til start
     rect(675, 650, 250, 100);
-     fill(0);
-    text("PLAY AGAIN",800,710);
+    fill(0);
+    text("PLAY AGAIN", 800, 710);
     textAlign(LEFT);
-       fill(255);
-    
+    fill(255);
   }
-  void endKnap(){
-   if (mouseX >=675 && mouseX <= 925 && mouseY >= 650 && mouseY <= 750) {
-     reset(); 
-     scene = 0;
+  //Selve slutknappen
+  void endKnap() {
+    if (mouseX >=675 && mouseX <= 925 && mouseY >= 650 && mouseY <= 750) {
+      reset(); 
+      scene = 0;
     }
   }
 }

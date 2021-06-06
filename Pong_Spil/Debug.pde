@@ -1,5 +1,5 @@
 class Debug {
-  //Debug
+  //Debuggeren kommer frem når man højreklikker
   void Debug() {
     if (mouseButton == RIGHT) {
       ellipse( mouseX, mouseY, 2, 2 );

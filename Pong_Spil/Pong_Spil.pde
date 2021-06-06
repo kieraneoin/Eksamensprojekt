@@ -1,5 +1,13 @@
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+//Objekterne deklareres //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
+Padlerne paddel; 
+=======
+>>>>>>> Stashed changes
 //Objekter //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
 Padlerne paddel;
+>>>>>>> c02a63fc37e18c7ab9b69532ca2ff5f26f8de009
 Padlerne soldat;
 Bold bold;
 WinLose WL;
@@ -7,27 +15,27 @@ ForhindringerGenerator FG;
 Menu m;
 Level Lvl;
 
-//Features
+//Features som også er objekter
 Debug Debug = new Debug();
 Billeder pic = new Billeder();
 
 //Variabler
-int H = 790;
-int H2 = 0;
+int H = 790;//Bruges til væggene
+int H2 = 0; //Bruges til væggene
 
-int startTime = 0;
-int time = 0;
+int startTime = 0;//Skulle være brugt til tid,
+int time = 0;//men blev ikke brugt
 
-int scene = 0;
+int scene = 0;//Vi kunne have brugt switch 
 
-int nextLevel;
+int nextLevel;//Angiver næste level
 
 void setup() {
   //Setup nødvendigheder
   size(1600, 900);
   frameRate(60);
 
-  //Objekter
+  //Objekterne kaldes og nogle får en værdi
   paddel = new Padlerne(200, 500, 30, 200);
   soldat = new Padlerne(1330, 500, 30, 200);
   FG = new ForhindringerGenerator();
@@ -45,6 +53,7 @@ void setup() {
 void draw() {
   clear();
   println(paddel.spillerRamtSvar);
+  //Scenesystemet
   if (scene==0) {
     m.display();
   }
@@ -77,20 +86,20 @@ void draw() {
     WL.end();
   }
 
-  //Debug
+  //Debug kan kaldes i alle scener
   Debug.Debug();
 }
-
+//Bevæger banditten
 void keyPressed() {
   paddel.moveBanditPress();
 }
-
+//Stopper bevægelsen
 void keyReleased() {
   paddel.moveBanditRelease();
 }
 
 void mouseClicked() {
-  //Scene inddeling
+  //Scene inddeling der bestemmer hvilke knapper der er tilgængelige
   if (scene == 0) {
     m.menuKlik();
   } else if (scene == 1) {
@@ -105,11 +114,11 @@ void mouseClicked() {
     WL.loseKnap();
   } else if (scene == 6) {
     WL.winKnap();
-  } else if (scene == 7){
-  WL.endKnap();
+  } else if (scene == 7) {
+    WL.endKnap();
   }
 }
-
+//Sørger for at spilleren ikke kan forlade banen
 void vaegge() {
   if (paddel.y - 10 < H2) { 
     paddel.y = H2 + 10;
@@ -118,6 +127,24 @@ void vaegge() {
     paddel.y = H - 10;
   }
 }
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+//Baserne tegnes
+void tegnBaser() {
+  image(pic.moske, -120, 300, 300, 300);
+  image(pic.barak, 1420, 350, 300, 300);
+}
+//Banen og dens elementer genstartes
+void levelReset() {
+  //Paddel
+  paddel.spillerRamt = 0;
+  soldat.soldatRyk = 0;
+  paddel.spillerRamtSvarCheck = 0;
+
+  //Forhindringer
+=======
+>>>>>>> Stashed changes
  //<>// //<>//
 void tegnBaser() { //<>// //<>//
   image(pic.moske, -120, 300, 300, 300); //<>// //<>//
@@ -131,6 +158,10 @@ void levelReset() { //<>// //<>//
   paddel.spillerRamtSvarCheck = 0; //<>// //<>//
  //<>// //<>//
   //Forhindringer //<>// //<>//
+<<<<<<< Updated upstream
+=======
+>>>>>>> c02a63fc37e18c7ab9b69532ca2ff5f26f8de009
+>>>>>>> Stashed changes
   FG.antalForhindringer = 0;
 
   //Bold
@@ -138,7 +169,7 @@ void levelReset() { //<>// //<>//
   bold.yPos = bold.startYPos;
   bold.voidSpeedCheck = 0;
 }
-
+//Starter spillet om fra første bane
 void reset() {
   //Bold Reset
   bold= new Bold(width/2, height/2, 30);
